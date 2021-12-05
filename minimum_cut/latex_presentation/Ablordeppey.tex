@@ -88,7 +88,7 @@
 					\]
 			\item We can define the set of cut edges as
 				\[
-					C=\left\{\{u,v\} \in \mathcal{E} | u \in S, v \in T \right\}
+					C=\left\{(u,v) \in \mathcal{E} | u \in S, v \in T \right\}
 				\]
 			\item The cut size 
 				\[
@@ -98,8 +98,8 @@
 			\item A group of vertices collapsed into one (1) is termed as a \textit{supernode}.
 			\item An edge connecting from a supernode to another vertex is called, a \textit{superedge}.
 			\item The weight of a superedge is the sum of weights of all individual vertices connecting both supernodes. 
-			\item All graphs $\mathcal{G}$ considered in this presentation are connected. Thus, there exists at least one (1) edge between any vertex of $\mathcal{V}$. 
-			\item Degree of a vertex $u$ represented as $Deg(u)$ is the number of edges connecting vertex $u$ to its immediate neighbors.
+			\item All graphs $\mathcal{G}$ considered in this presentation are connected. Thus, there exists at least one (1) edge between any two (2) vertices of $\mathcal{V}$. 
+%			\item Degree of a vertex $u$ represented as $Deg(u)$ is the number of edges connecting vertex $u$ to its immediate neighbors.
 		\end{itemize}
 	
 	\section{Outline Of Implementation}
@@ -113,14 +113,14 @@
 		\end{enumerate}
 	 	
 	 \section{Brute-Force / Exhaustive Implementation}
-		This technique computes the $cut$ for all possible complementary partitions of the vertices set $\mathcal{V}$. The minimum of all these computed cuts represents the $minimum \text{ } cut$ of the graph $\mathcal{G}$. The implementation is presented in Algorithm (\ref{algotithm:ExhaustiveSearchMain}) below with two helping methods \textbf{GetPartCut} and \textbf{GetCompPartitions} described below in detail.
+		This technique computes the $cut$ for all possible complementary partitions of the vertices set $\mathcal{V}$. The minimum of all these computed cuts represents the $minimum \text{ } cut$ of the graph $\mathcal{G}$. The implementation is presented in Algorithm (\ref{algorithm:ExhaustiveSearchMain}) below with two helping methods \textbf{GetPartCut} as Algorithm (\ref{algorithm:GetPartCut}) and \textbf{GetCompPartitions} as Algorithm (\ref{algorithm:GetCompPartitions}) described below in detail.
 		
 %		\begin{enumerate}[label=(\arabic*)]
 %			\item \textbf{GetPartCut}
 			\subsection{Compute Partition Cut}
 				\begin{algorithm}
 					\caption{Compute Cut Of A Partition of $\mathcal{V}$}
-					\label{algotithm:GetPartCut}
+					\label{algorithm:GetPartCut}
 					
 					% Defining output and inputs
 					\SetKwInOut{Input}{Input}  
@@ -156,7 +156,7 @@
 				
 				The one proposed in this project made use of the adjacency matrix $(Adj(\mathcal{G}))$, which happens to be very straight forward and has easy implementation. The cut for a partition $vset$ is the number of edges connecting $S$ and $T$. To achieve this, we leverage the fact that if an edge exists between two vertices $(v_1, v_2)$, then, their representation/value in the adjacency matrix is one (1). If this is achieved, the number of cuts ($Num\_Cuts$) is updated by one (1).\\
 				
-				The cut for the given complementary partition will be returned after the end of execution of Algorithm (\ref{algotithm:GetPartCut}). This algorithm runs in $\mathcal{O}(|S|\cdot |T|)$ time. The complexity for this algorithm is analyzed below for the two possible cases where the number of vertices $n$ is even or odd. 
+				The cut for the given complementary partition will be returned after the end of execution of Algorithm (\ref{algorithm:GetPartCut}). This algorithm runs in $\mathcal{O}(|S|\cdot |T|)$ time. The complexity for this algorithm is analyzed below for the two possible cases where the number of vertices $n$ is even or odd. 
 				\begin{itemize}
 					\label{list:getpartcut}
 					\item If $|\mathcal{V}|=n$ is even
@@ -168,17 +168,18 @@
 					\item If $|\mathcal{V}|=n$ is odd
 					\begin{align*}
 						C = & \mathcal{O}\left(|S|\cdot |T|\right)\\
-						= & \mathcal{O}\left(\frac{n-1}{2}\cdot \frac{n}{2}\right)\\
+						= & \mathcal{O}\left(\frac{n-1}{2}\cdot \frac{n+1}{2}\right)\\
 						= & \mathcal{O}\left(\dfrac{n(n-1)}{4}\right) \\
 						= & \mathcal{O}\left(\dfrac{n^2-n}{4}\right)  = \mathcal{O}(n^2)
 					\end{align*}
 				\end{itemize}
-				Hence, for all cases of $n$ the complexity of this algorithm is $\mathbf{\mathcal{O}(n^2)}$\\
+				Hence, for all cases of $n$ the complexity of this algorithm is $\mathbf{\mathcal{O}(n^2)}$.\\
 			
 %			\item \textbf{GetCompPartitions}
 		\subsection{Generate Valid Complementary Partitions}
 			\begin{algorithm}[h]
 				\caption{Get Valid Compl. Partitions Of $\mathcal{V}$}
+				\label{algorithm:GetCompPartitions}
 				\SetKwInput{KwInput}{Input}                % Set the Input
 				\SetKwInput{KwOutput}{Output}              % set the Output
 				\DontPrintSemicolon
@@ -207,7 +208,7 @@
 					\KwRet CompParts\;
 				}
 			\end{algorithm}
-			The goal of this function is to generate all non-empty, non-permuted complementary partitions of the given vertices set $\mathcal{V}$. We can easily obtain such partitions by considering the powerset $(\mathcal{P})$ of $\mathcal{V}$. The function returns a list of tuples, each comprising of a subset and its complement in $V$. The total of all these subsets are $2^n$. Since our interest is to obtain non-empty partitions, we eliminate the empty set $(\emptyset)$ and the set with the full vertices (have complement as the empty set $\emptyset$). This results in $(2^{n}-2)$ partitions returned by this function. The complexity of this algorithm runs in $\mathbf{\mathcal{O}(2^n)}$.\\
+			The goal of this function is to generate all non-empty, non-permuted complementary partitions of the given vertices set $\mathcal{V}$. We can easily obtain such partitions by considering the powerset $(\mathcal{P})$ of $\mathcal{V}$. The function returns a list of tuples, each comprising of a subset and its complement in $V$. The total of all these subsets is $2^n$. Since our interest is to obtain non-empty partitions, we eliminate the empty set $(\emptyset)$ and the set with the full vertices (having complement as the empty set $\emptyset$). This results in $(2^{n}-2)$ partitions returned by this function. The complexity of this algorithm runs in $\mathbf{\mathcal{O}(2^n)}$.\\
 			
 			Again, a basic analysis of all complementary sets returned by this function contains symmetry partitions. To illustrate, lets consider a connected graph with three (3) vertices. Thus, $\mathcal{V}=\{0,1,2\}$. From the derived expression above, the number of complementary sets will be $|CompParts|=2^3-2=8-2=6$.\\
 			
@@ -231,15 +232,15 @@
 				\end{center}
 			\end{table}		
 			
-			As we can clearly observe from TABLE \ref{table:VSetsExample1}, half of these complementary partitions are simply permutations of the second half. Considering larger vertices set, this phenomenon also applies. Hence its prudent to restrict only half of these initial number of complementary sets. Thus, the actual number of non-permuted complementary sets generated for the above example will be $$|CompParts|=\frac{2^3-2}{2}=\frac{8-2}{2}=3$$
+			As we can clearly observe from TABLE \ref{table:VSetsExample1}, the first half of these complementary partitions are simply permutations of the second half. Considering larger vertices set, this phenomenon also applies. Hence it is prudent to restrict the total number of complementary partitions to only the first half or second half. Thus, the actual number of non-permuted non-empty complementary sets generated for the above example will be $$|CompParts|=\frac{2^3-2}{2}=\frac{8-2}{2}=3$$
 			The general number of complementary partitions that will be generated given $n=|\mathcal{V}|$ is then given by $$|CompParts|=\frac{2^n-2}{2}=(2^{n-1}-1)$$
-			This goes a long way to decrease the running time of the second part of the brute-force or exhaustive search algorithm implemented. Since cuts will be computed only for $(2^{n-1}-1)$ different partitions instead of the previous $(2^{n}-2)$ we saw earlier.
+			This goes a long way to decrease the running time of the second part of the Brute-Force or Exhaustive-Search algorithm implemented. Since cuts will be computed only for $(2^{n-1}-1)$ different partitions instead of the previous $(2^{n}-2)$ we saw earlier.
 %		\end{enumerate}
 	
 		\subsection{Main Exhaustive Search Method}
-			\begin{algorithm}[h]
-				\caption{Exhaustive Search}[h]
-				\label{algotithm:ExhaustiveSearchMain}
+			\begin{algorithm}
+				\caption{Exhaustive Search}
+				\label{algorithm:ExhaustiveSearchMain}
 				\SetKwInput{KwInput}{Input}                % Set the Input
 				\SetKwInput{KwOutput}{Output}              % set the Output
 				\DontPrintSemicolon
@@ -270,21 +271,23 @@
 			\end{algorithm}
 		
 		
-			First, we obtain all the various complementary partitions of the vertices set using the \textbf{GetCompPartitions} method as described above. To get the $min\_cut\_size$ of the graph, we could consider two (2) approaches;
+			First, we generate all the various complementary partitions of the vertices set using the \textbf{GetCompPartitions} method in Algorithm (\ref{algorithm:GetCompPartitions}) as described above. To get the $min\_cut\_size$ of the graph, we could consider two (2) approaches;
 			\begin{enumerate}[label=(\arabic*)]
 				\item Create an array to hold the cuts for all partitions. We compute the cut for each partition and append it to the array. After that, we find the minimum value of the array. This represents our $min\_cut\_size$.
 				\item instantiate a very large integer value to be the $min\_cut\_size$. For every cut computed for each complementary partition, we compare this cut to the $min\_cut\_size$ value. If the cut is smaller, then we update the $min\_cut\_size$ with the computed cut, otherwise, we continue to compute the cut for the next partition.
 			\end{enumerate}
-			Analysis of the first approach is computationally expensive due to IO overhead. The overhead results from array creation; writing cuts to array and the searching for the minimum value from the array. This leaves us with the second approach which is much more efficient. The second technique was implemented as presented in the Algorithm (\ref{algotithm:ExhaustiveSearchMain}).\\
+			Analysis of the first approach is computationally expensive due to IO overhead. The overhead results from array creation; writing cuts to array and the searching for the minimum value from the array. This leaves us with the second approach which is much more efficient. The second technique was implemented as presented in the Algorithm (\ref{algorithm:ExhaustiveSearchMain}).\\
 			
 			As highlighted above, the complexity of the \textbf{GetCompPartitions} method is $\mathcal{O}(2^n)$, which returns an array of $(2^{n-1}-1)$ complementary partitions. For each of these complementary partitions, the \textbf{GetPartCut} algorithm is called which also runs in $\mathbf{\mathcal{O}(n^2)}$. Putting everything together, the Exhaustive Search implementation of the minimum cut problem runs in complexity
 			\begin{align*}
 				C & = \mathcal{O}\left(2^n + (2^{n-1}-1)\cdot n^2\right) \\
 				& = \mathcal{O}\left(2^n + n^2\cdot 2^{n-1} - n^2\right) \\
 				& = \mathcal{O}\left(2^n + n^2\cdot 2^{n-1}\right) \\
-				& = \mathbf{\mathcal{O}\left(2^n\right)}
+				& = \mathcal{O}\left(n^2\cdot 2^{n}\right)\\
+				& = \mathcal{O}\left(2^n\cdot 2^{n}\right)\\
+				& = \mathbf{\mathcal{O}\left(2^{2n}\right)} \\
 			\end{align*}
-			Thus Exhaustive Search will probably not be used until faster methods have first reduced the size of the problem.
+			Thus the Exhaustive-Search implementation will probably not be used until faster methods have first reduced the size of the problem.
 		
 	\section{Greedy-Heuristics Implementation}
 		A Greedy algorithm is any algorithm that follows the problem-solving heuristic of making the locally optimal choice at each stage.\cite{black2012greedy} In many problems, a greedy strategy does not produce an optimal solution, but a greedy heuristic can yield locally optimal solutions that approximate a globally optimal solution in a reasonable amount of time.\\
@@ -316,7 +319,7 @@
 		\subsection{Compute Vertex Degree $Deg(u)$}
 			\begin{algorithm}
 				\caption{Compute Degree Of Vertex}
-				\label{algotithm:GetVertexDegree}
+				\label{algorithm:GetVertexDegree}
 				\SetKwInput{Input}{Input}                % Set the Input
 				\SetKwInput{KwOutput}{Output}              % set the Output
 				\DontPrintSemicolon
@@ -351,7 +354,7 @@
 		\subsection{Main Greedy Heuristic Method}
 			\begin{algorithm}
 				\caption{Greedy Heuristics}
-				\label{algotithm:GreedyHeuristics}
+				\label{algorithm:GreedyHeuristics}
 				\SetKwInput{KwInput}{Input}                % Set the Input
 				\SetKwInput{KwOutput}{Output}              % set the Output
 				\DontPrintSemicolon
@@ -400,15 +403,15 @@
 		
 		This algorithm utilizes two (2) functions
 		\begin{itemize}
-			\item Picking random edges to merge. $Algorithm\text{ }(\ref{algotithm:UpdateGraph}$)
-			\item Updating the Graph. $Algorithm \text{ }(\ref{algotithm:probabilisticRandomized})$
+			\item Picking random edges to merge. $Algorithm\text{ }(\ref{algorithm:UpdateGraph}$)
+			\item Updating the Graph. $Algorithm \text{ }(\ref{algorithm:probabilisticRandomized})$
 		\end{itemize}
 	
 		
 		\subsection{Merging Operation}
 			\begin{algorithm}
 				\caption{Merge Edge Update Graph}
-				\label{algotithm:UpdateGraph}
+				\label{algorithm:UpdateGraph}
 				\SetKwInput{KwInput}{Input}                % Set the Input
 				\SetKwInput{KwOutput}{Output}              % set the Output
 				\DontPrintSemicolon
@@ -458,13 +461,13 @@
 				}
 			\end{algorithm}
 	
-			From Algorithm \ref{algotithm:UpdateGraph}, we realize that the edge contracting/merging is done on one (1) edge at a time, until only one edge remains in the graph. In the worst case, the neighbors of a vertex set could be $(n-1)$ which runs in $\mathcal{O}(n-1)=\mathbf{\mathcal{O}(n)}$.
+			From Algorithm (\ref{algorithm:UpdateGraph}), we realize that the edge contracting/merging is done on one (1) edge at a time, until only one edge remains in the graph. In the worst case, the neighbors of a vertex set could be $(n-1)$ which runs in $\mathcal{O}(n-1)=\mathbf{\mathcal{O}(n)}$.
 		
 		
 		\subsection{Main Probability Randomized Method}
 			\begin{algorithm}[h]
 				\caption{Randomized Algorithm}
-				\label{algotithm:probabilisticRandomized}
+				\label{algorithm:probabilisticRandomized}
 				\SetKwInput{KwInput}{Input}                % Set the Input
 				\SetKwInput{KwOutput}{Output}              % set the Output
 				\DontPrintSemicolon
@@ -493,7 +496,7 @@
 				}
 			\end{algorithm}
 			
-			The \textbf{ProbabilityRandomized} in Algorithm \ref{algotithm:probabilisticRandomized} is the actual implementation of a randomized algorithm for the minimum cut. The algorithm merges vertices of a random edge one (1) at a time until only two (2) vertices are remaining. This runs in complexity $\mathcal{O}(n-2)=\mathcal{O}(n)$. The \textbf{UpdateGraph} method in Algorithm \ref{algotithm:UpdateGraph} runs at most for $(n-1)$ vertices. Thus, $\mathcal{O}(n)$ time. Putting all together, this algorithm runs in $\mathcal{O}(n\cdot n)=\mathbf{\mathcal{O}(n^2)}$\\
+			The \textbf{ProbabilityRandomized} in Algorithm (\ref{algorithm:probabilisticRandomized}) is the actual implementation of a randomized algorithm for the minimum cut. The algorithm merges vertices of a random edge one (1) at a time until only two (2) vertices are remaining. This runs in complexity $\mathcal{O}(n-2)=\mathcal{O}(n)$. The \textbf{UpdateGraph} method in Algorithm \ref{algorithm:UpdateGraph} runs at most for $(n-1)$ vertices. Thus, $\mathcal{O}(n)$ time. Putting all together, this algorithm runs in $\mathcal{O}(n\cdot n)=\mathbf{\mathcal{O}(n^2)}$\\
 			
 			On multiple runs of this algorithm, the minimum cut returned may be different from the previous estimate.\\
 		
@@ -509,11 +512,11 @@
 			\end{figure}
 			
 			
-			Fig (\ref{figure:randomedgecontractionexample1}) is an implementation of the randomized algorithm as described in \textbf{ProbabilityRandomized} in Algorithm \ref{algotithm:probabilisticRandomized} above on a connected graph with five (5) vertices and eight (8) edges. The default weight of all edges in the graph is one (1). In each instance of the execution, an edge is picked at random and merged into a supernode, until only one edge is left. From the start to the finish of the algorithm, it is worth noting that, $(5-2)=3$ vertices were merged on. Also, the example happens to give the correct minimum cut, but only because we carefully picked the edges for merging. There are many other choices of edges for merging, so it's possible we could have ended with a cut with more than two (2) edges.\\
+			Fig (\ref{figure:randomedgecontractionexample1}) is an implementation of the randomized algorithm as described in \textbf{ProbabilityRandomized} in Algorithm (\ref{algorithm:probabilisticRandomized}) above on a connected graph with five (5) vertices and eight (8) edges. The default weight of all edges in the graph is one (1). In each instance of the execution, an edge is picked at random and merged into a supernode, until only one edge is left. From the start to the finish of the algorithm, it is worth noting that, $(5-2)=3$ vertices were merged on. Also, the example happens to give the correct minimum cut, but only because we carefully picked the edges for merging. There are many other choices of edges for merging, so it's possible we could have ended with a cut with more than two (2) edges.\\
 		
 		\subsection{Improving Randomized Results}
 			From the literature \cite{mincutandkargersalgorithm}, running the \textbf{ProbabilityRandomized} algorithm multiple times and returning the minimum cut results in a much higher probability of realizing the exact minimum cut. It was proved that, the number of trials to perform can be expressed as $\left(\mathcal{C}\cdot {n\choose 2}\cdot \ln (n)\right)$ so as to have a higher chance of realizing the minimum cut with probability of at least $$\mathcal{P}\ge 1-\dfrac{1}{n^C}$$
-			The improved method is presented in Algorithm \ref{algotithm:ImprovedProbabilisticRandomized}, with complexity, 
+			The improved method is presented in Algorithm (\ref{algorithm:ImprovedProbabilisticRandomized}), with complexity, 
 			\begin{align*}
 				C &=\mathcal{O}\left(\mathcal{C}\cdot {n\choose 2}\cdot \ln (n) \cdot n^2 \right)\\
 				&= \mathcal{O}\left(\dfrac{n(n-1)}{2}\cdot n^2\cdot \ln(n)\right)\\
@@ -522,7 +525,7 @@
 			
 			\begin{algorithm}[h]
 				\caption{Improved Randomized Algorithm}
-				\label{algotithm:ImprovedProbabilisticRandomized}
+				\label{algorithm:ImprovedProbabilisticRandomized}
 				\SetKwInput{KwInput}{Input}                % Set the Input
 				\SetKwInput{KwOutput}{Output}              % set the Output
 				\DontPrintSemicolon
@@ -560,7 +563,7 @@
 		For analysis purposes, only some graphs were selected for comparison of the various algorithms. 
 		
 		\subsection{Graphs Considered For Analysis}
-			The graphs considered are presented in TABLE \ref{table:graphsconsidered}. From observation, any graphs with vertices larger than twenty (20) takes infinitely long time to execute the Exhaustive-Search algorithm. The choice of the various graphs is done so as to realize some patterns among the executions of the various algorithms.
+			The graphs considered are presented in TABLE \ref{table:graphsconsidered}. From observation, any graph with vertices larger than twenty (20) takes infinitely long time to execute the Exhaustive-Search algorithm. The choice of the various graphs is done so as to realize some patterns among the executions of the various algorithms.
 			
 			\begin{table}[h]
 				\caption{Graphs Considered}
@@ -587,9 +590,7 @@
 			\end{table}
 		
 		\subsection{Algorithms Complexities}
-			It can be observed from Fig. \ref{figure:complexities} that, the complexity of the Exhaustive-Search algorithm for graphs having more than eighteen (18) vertices tend to increase very fast, as compared to the other algorithms. This explains why my computer (\textit{16GBRAM, AMD Ryzen 7 4800H with Radeon Graphics and speed 2.90 GHz}) had to restart automatically due to the expensive computational resource used up by the Exhaustive-Search algorithm when computing the minimum cut for graph with twenty-five (25) vertices. The Improved Probability Randomized algorithm has a reasonable running time compared to the Exhaustive Search. Since the Greedy and Probabilistic Randomized algorithms run have the same complexities, we didn't observe any significant difference in their running times. \\ 
-			
-			After being able to compute the minimum cut for graphs with at most twenty (20) vertices, which involves about one-million (1,500,000) iterations of the Exhaustive-Search method, any higher vertice graphs considered have undoubtedly high number of iterations. For instance, over a billion iteration is expected for a graph with thirty (30) vertices, which could greatly impact the performance of the running system and may cause a break down.
+			It can be observed from Fig. (\ref{figure:complexities}) that, the complexity of the Exhaustive-Search algorithm for graphs having more than eighteen (18) vertices tend to increase very fast, as compared to the other algorithms. This explains why my computer (\textit{16GBRAM, AMD Ryzen 7 4800H with Radeon Graphics and speed 2.90 GHz}) had to restart automatically due to the expensive computational resource used up by the Exhaustive-Search algorithm when computing the minimum cut for graph with twenty-five (25) vertices. The Improved Probability Randomized algorithm has a reasonable running time compared to the Exhaustive Search. Since the Greedy and Probabilistic Randomized algorithms run have the same complexities, we didn't observe any significant difference in their running times. 
 			\begin{table}[h]
 				\caption{Complexities}
 				\label{table:computationalComplexities}
@@ -598,7 +599,7 @@
 						\hline
 						Brute-Force & Greedy & ProbRand & ImpProbRand\\
 						\hline
-						$\mathcal{O}\left(2^n\right)$&
+						$\mathcal{O}\left(2^{2n}\right)$&
 						$\mathcal{O}(n^2)$&$\mathcal{O}(n^2)$&$\mathcal{O}\left(n^4\cdot \ln(n)\right)$\\
 						\hline
 					\end{tabular}
@@ -617,24 +618,129 @@
 			\end{figure}
 		
 		\subsection{Algorithms Timed Executions}
-			TABLE \ref{table:algorithmtimedexecutions} reports a timed implementation of the algorithms which confirm the analysis of complexities conducted in the previous section; with the Greedy and Probabilistic Random algorithm performing similarly. As discussed during the complexities analysis, graph five (5) never completed with my computer breaking down on the Exhaustive-Search implementation. The improved Improved Probabilistic Random technique was able to obtain the correct minimum cut in less times as compared to the Brute-Force technique.
+			The individual timing of execution for the algorithms is presented 
 			
-			\begin{table}[h]
-				\caption{Timed Executions (sec)}
-				\label{table:algorithmtimedexecutions}
-				{\renewcommand{\arraystretch}{2}
-					\begin{tabular}{|c|c|c|c|c|}
-						\hline
-						Graph& Brute-Force & Greedy & ProbRand & ImpProbRand\\
-						\hline
-						1&0.003&0.0&0.0&0.002\\
-						2&0.082&0.0&0.0&0.034\\
-						3&3.934&0.0&0.001&0.207\\
-						4&171.034&0.001&0.001&0.739\\
-						\hline
-					\end{tabular}
-				}
-			\end{table}
+			\begin{itemize}
+				\item Exhaustive Search
+					\begin{table}[h]
+						\caption{Timed Brute-Force}
+						\label{table:timedbruteforce}
+						\begin{center}					
+						{\renewcommand{\arraystretch}{2}
+							\begin{tabular}{|c|c|l|}
+								\hline
+								Graph& Time(sec) & Counter\\
+								\hline
+								1&0.002&112\\
+								2&0.082&12544\\
+								3&3.934&892928\\
+								4&146.1&50855936\\
+								\hline
+							\end{tabular}
+						}
+						\end{center}
+					\end{table}
+					
+					The number of iterations executed by the Brute-Force algorithm can formally be presented as 
+					\begin{align*}
+						C&=\sum_{i=1}^{2^n}1+\sum_{i=1}^{(2^{n-1}-1)}\cdot \sum\limits_{\substack{j=1 \\ S\subset \mathcal{V}}}^{|S|}\cdot 
+						\sum\limits_{\substack{k=1 \\ T=\mathcal{V}\backslash S }}^{|T|} 1\\
+						&=2^n+\left(2^{n-1}-1\right)\cdot |S|\cdot |T| \\
+%						&\le 2^n+\left(2^{n-1}-1\right)\cdot \frac{n}{2}\cdot \frac{n}{2} \\
+						&\le 2^n+\left(2^{n-1}-1\right)\cdot \frac{n^2}{4} \\
+						&< 2^n+\left(2^{n-1}-1\right)\cdot n^2 \\
+						&< 2^n+2^{n-1}\cdot n^2 \\
+						&< 2^n+2^{n}\cdot n^2 \\
+						&\le 2^{2n}\\
+					\end{align*}
+					As shown above, $C=2^{2n}$ is an upper bound to our minimum cut problem via the Brute-Force algorithm.
+					
+				\item Greedy-Heuristics
+					\begin{table}[h]
+						\caption{Timed Greedy-Heuristics}
+						\label{table:timedgreedy}
+						\begin{center}					
+							{\renewcommand{\arraystretch}{2}
+								\begin{tabular}{|c|c|l|}
+									\hline
+									Graph& Time(sec) & Counter\\
+									\hline
+									1&0.00099&25\\
+									2&0.0&100\\
+									3&0.001000&225\\
+									4&0.001000&400\\
+									5&0.000999&625\\
+									\hline
+								\end{tabular}
+							}
+						\end{center}
+					\end{table}
+					
+					Again, the number of iterations executed by the Greedy-Heuristics algorithm can formally be presented as 
+					\begin{align*}
+						C&=\sum_{i=1}^{n}\cdot \sum_{j=1}^{n}1\\
+						&=n\cdot n\\
+						&=n^2
+					\end{align*}
+					As shown above, $C=n^2$ is the exact number of iterations for the Greedy-Heuristics in estimating the minimum cut size for a graph with $n$ vertices.
+					
+				\item Probabilistic Randomized Algorithm
+					\begin{table}[h]
+						\caption{Timed Greedy-Heuristics}
+						\label{table:probrandom}
+						\begin{center}					
+							{\renewcommand{\arraystretch}{2}
+								\begin{tabular}{|c|c|l|}
+									\hline
+									Graph& Time(sec) & Counter\\
+									\hline
+									1&0.0&16\\
+									2&0.0&67\\
+									3&0.0008&164\\
+									4&0.002&281\\
+									5&0.001&447\\
+									\hline
+								\end{tabular}
+							}
+						\end{center}
+					\end{table}
+					
+					Every run of this algorithm results in $n-2$ merge operations. In each run, we check the $n$ vertices for connection to vertices to be merged for graph update. We construct an upper bound for this algorithm as follows 
+					\begin{align*}
+						C&=\sum_{i=1}^{(n-2)}\cdot \sum_{j=1}^{n} 1 \\
+						&=(n-2)\cdot n\\
+						&=n^2-2n \\
+						&<n^2
+					\end{align*}
+					We hereby have an upper bound to our minimum cut problem with this random probabilistic implementation.
+					
+				\item Improved Probabilistic Randomized Algorithm \\
+					\begin{table}[h]
+						\caption{Timed Greedy-Heuristics}
+						\label{table:impprobrandom}
+						\begin{center}					
+							{\renewcommand{\arraystretch}{2}
+								\begin{tabular}{|c|c|l|}
+									\hline
+									Graph& Time(sec) & Counter\\
+									\hline
+									1&0.002&256\\
+									2&0.035&6991\\
+									3&0.199&45478\\
+									4&0.652&158899\\
+									5&1.685&422897\\
+									\hline
+								\end{tabular}
+							}
+						\end{center}
+					\end{table}
+					
+					As implemented above for the Probabilistic Randomized algorithm \ref{table:probrandom}, an upper bound for this algorithm could be expressed as
+					\begin{align*}
+						C&< n\cdot C \cdot {n\choose 2} \ln (n)\\
+					\end{align*}
+			\end{itemize}
+			
 			
 	\section{Auxiliary Functions}
 		We employed four (4) functions to help with the implementation of this project. They are;
