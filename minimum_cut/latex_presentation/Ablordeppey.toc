@@ -1,0 +1,17 @@
+\babel@toc {portuguese}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {I}Notation and Problem Definition}{1}{}%
+\contentsline {section}{\numberline {II}Outline Of Implementation}{1}{}%
+\contentsline {section}{Contents}{1}{}%
+\contentsline {section}{\numberline {III}Brute-Force / Exhaustive Implementation}{1}{}%
+\contentsline {subsection}{\numberline {III-A}\underline {\textbf {Compute Partition Cut}}}{1}{}%
+\contentsline {subsection}{\numberline {III-B}\underline {\textbf {Generate Valid Complementary Partitions}}}{2}{}%
+\contentsline {subsection}{\numberline {III-C}\textbf {\underline {Main Exhaustive Search Method}}}{2}{}%
+\contentsline {section}{\numberline {IV}Greedy-Heuristics Implementation}{3}{}%
+\contentsline {section}{\numberline {V}Probabilistic And Randomized Implementation}{4}{}%
+\contentsline {subsection}{\numberline {V-A}\underline {\textbf {Merging Operation}}}{4}{}%
+\contentsline {subsection}{\numberline {V-B}\underline {\textbf {Main Probability Randomized Method}}}{4}{}%
+\contentsline {subsection}{\numberline {V-C}\underline {\textbf {Improving Randomized Results}}}{5}{}%
+\contentsline {section}{References}{5}{}%
