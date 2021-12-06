@@ -5,5 +5,5 @@ This repository hosts all projects and reports for the Advanced Algorithms cours
 > MINIMUM CUT PROBLEM
  - Implements a Bruteforce/ExhaustiveSearch, Greedy-Heuristics and a Probabilistic Randomized with Improvements to solving this problem.
  - Computational complexities and running time of these algorithms were carefully analyzed.
- - Submitted December 5th, 2021
+ - Submitted on December 5th, 2021
 
