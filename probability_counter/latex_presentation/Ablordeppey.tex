@@ -1,0 +1,93 @@
+%
+% General structure for the revdetua class:
+%
+\documentclass[longpaper, english, final, times]{revdetua}
+%
+% Valid options are:
+%
+%   longpaper --------- \part and \tableofcontents defined
+%   shortpaper -------- \part and \tableofcontents not defined (default)
+%
+%   english ----------- main language is English (default)
+%   portugues --------- main language is Portuguese
+%
+%   draft ------------- draft version
+%   final ------------- final version (default)
+%
+%   times ------------- use times (postscript) fonts for text
+%
+%   mirror ------------ prints a mirror image of the paper (with dvips)
+%
+%   visiblelabels ----- \SL, \SN, \SP, \EL, \EN, etc. defined
+%   invisiblelabels --- \SL, \SN, \SP, \EL, \EN, etc. not defined (default)
+%
+% Note: the final version should use the times fonts
+% Note: the really final version should also use the mirror option
+%
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{booktabs} % To thicken table lines
+%\usepackage{longtable}
+\usepackage{arydshln}
+\usepackage{graphicx}
+
+
+%% ALGORITHM 1 PROCEEDURES-----------------------------------------
+%\usepackage{algorithm}
+%%\usepackage[algo2e]{algorithm2e} 
+%\usepackage{arevmath}     % For math symbols
+%\usepackage[noend]{algpseudocode}
+
+%% ALGORITHM 2 FUNCTIONS-----------------------------------------
+\usepackage{xcolor}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+% set comment color to blue
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+\begin{document}
+	
+	%\Header{Volume}{Number}{Month}{Year}{InitialPage}
+	% Note: the month must be in Portuguese
+	
+	\title{The Minimum Cut Problem For An Undirected Graph}
+	\author{ABLORDEPPEY Prosper} % or \author{... \and ...}
+	\maketitle
+	
+	\begin{abstract}% Note: in English
+		In this project, the goal is to count the number of occurrences of letters in text files and, for instance, identify the most common ones. Three types of counters were analyzed. The \textit{Exact Counter}; which provides the exact count or frequency of each letter present in the text, the \textit{Fixed Probability Counter}, which approximates the frequency or number of counts of each letter in the text using a fixed probability value of $\dfrac{1}{2}$. The last counting method considered, being the \textit{Decreasing Probability Counter} approximates the count of each letter in the text with each future encounter of the letter having a decreased probability of being counter, with probability $(\dfrac{1}{\sqrt{2}^k})$ where $k$ is the number of occurrence of the letter of interest.
+	\end{abstract}
+	
+%	\begin{resumo}% Note: in Portuguese
+%		...
+%	\end{resumo}
+	
+%	\begin{keywords}% Note: in English (optional)
+%		...
+%	\end{keywords}
+	
+%	\begin{palavraschave}% Note: in Portuguese (optional)
+%		...
+%	\end{palavraschave}
+
+	\section{Notation and Problem Definition}
+		
+			
+	\section{Outline Of Implementation}
+		
+	 	
+	 \section{Brute-Force / Exhaustive Implementation}
+		
+	\section{Greedy-Heuristics Implementation}
+	
+	\section{Probabilistic And Randomized Implementation}
+	
+	\section{Computational Complexities}
+	
+	\section{Auxiliary Functions}
+	
+		
+	\bibliography{references} % use a field named url or \url{} for URLs
+	% Note: the \bibliographystyle is set automatically
+	
+\end{document}
