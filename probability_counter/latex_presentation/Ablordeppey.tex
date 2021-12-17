@@ -25,7 +25,7 @@
 % Note: the really final version should also use the mirror option
 %
 
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb}
 \usepackage{enumitem}
 \usepackage{booktabs} % To thicken table lines
 %\usepackage{longtable}
@@ -76,13 +76,51 @@
 	\section{Outline Of Implementation}
 		
 	 	
-	 \section{Brute-Force / Exhaustive Implementation}
+	 \section{EXACT COUNTER}
+	 
 		
-	\section{Greedy-Heuristics Implementation}
+	\section{FIXED PROBABILITY COUNTER}
+		\begin{table}[h]
+			\caption{}
+			{\def\arraystretch{2}%
+			\begin{tabular}{l|l|l}
+				\toprule
+				Number of Events & $\mathbb{E}[S]$ & Expected Counter Value\\
+				\hline
+				1 & 1 & 1 \\
+				5 & $1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&2\\
+				13 & $\mathbb{E}[S]_{10}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&3 \\
+				27 & $1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&4 \\
+				51 & $1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&4 \\
+			\end{tabular}
+			}
+		\end{table}
 	
-	\section{Probabilistic And Randomized Implementation}
+		We define an expression for the sum function as
+		\begin{align*}
+			\sum_{k=1}^{n}\frac{1}{2}=&\sum_{k=0}^{n-1}\frac{1}{2} \\
+			=&n\cdot \frac{1}{2}\\
+			=&\frac{n}{2}
+		\end{align*}
+		The complexity of this computation completes in $\mathcal
+		{O}\left(\frac{n}{2}\right)=\mathcal{O}(n)$ time.
 	
-	\section{Computational Complexities}
+	\section{DECREASING PROBABILITY COUNTER}
+		The above summation could be expressed as
+		\begin{align*}
+			\sum_{k=1}^{n}\dfrac{1}{\left(\sqrt{2}\right)^{k-1}}=&\sum_{k=0}^{n-1}\dfrac{1}{\left(\sqrt{2}\right)^{k}} \\
+			\intertext{To derive an upperbound, we derive an expression for the sum function as}
+			\sum_{k=1}^{n}\dfrac{1}{\left(\sqrt{2}\right)^{k-1}}=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2}\\
+			\intertext{We obtain an upperbound for the expected counts by evaluating the limit of this function as n becomes bigger and bigger}
+			\intertext{Let $\phi(S) \ge \mathbb{E}[s], \forall s $}
+			\phi(S)=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
+			=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2}\cdot \dfrac{\sqrt{2}+2}{\sqrt{2}+2}\\
+			=&\lim_{n\to \infty} 2^{\frac{1}{2}}+2-2^{\frac{1-n}{2}}-2^{\frac{2-n}{2}}
+			\intertext{As $k\to \infty$, $2^{-k} \to 0$}
+			\therefore \phi(S)=&\sqrt{2}+2 \\
+			\approx & 3.14142
+		\end{align*}
+	
 	
 	\section{Auxiliary Functions}
 	

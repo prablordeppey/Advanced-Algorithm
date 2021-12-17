@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.24)  13 DEC 2021 09:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.24)  17 DEC 2021 15:46
 entering extended mode
 **./Ablordeppey.tex
 (Ablordeppey.tex
@@ -119,6 +119,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitkv@toks@=\toks21
@@ -321,33 +332,70 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)) (Ablordeppey.bbl) [1{C:/Users/iCETEE/AppData/Local/MiKTeX/pdftex/config/pdft
-ex.map}
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
+ (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+
+ (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (124.07692pt too wide) in paragraph at lines 86--97
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--97
+
+ []
+
+
+Underfull \vbox (badness 2644) has occurred while \output is active []
+
+
+(Ablordeppey.bbl) [1{C:/Users/iCETEE/AppData/Local/MiKTeX/pdftex/config/pdftex.
+map}
 
 
 ] (Ablordeppey.aux) ) 
 Here is how much of TeX's memory you used:
- 5208 strings out of 478927
- 79710 string characters out of 2852060
- 408131 words of memory out of 3000000
- 22993 multiletter control sequences out of 15000+600000
- 423261 words of font info for 68 fonts, out of 8000000 for 9000
+ 5728 strings out of 478927
+ 85505 string characters out of 2852060
+ 426644 words of memory out of 3000000
+ 23494 multiletter control sequences out of 15000+600000
+ 426795 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,9n,68p,831b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,11n,68p,831b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/enc/d
 vips/base/8r.enc}<C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cmextra/cmbsy9.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/iCETEE/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/iCETEE/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb><C:/User
-s/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Use
-rs/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/U
-sers/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/
-Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Ablordeppey.pdf (1 page, 87317 bytes).
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/iCETEE/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/iCETEE/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users
+/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+<C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmex
+tra/cmmib6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cmextra/cmmib9.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/iCETEE/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/iCETEE/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/iCETEE/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/iCET
+EE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/U
+sers/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+symbols/msam10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTe
+X/fonts/type1/urw/times/utmb8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKT
+eX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/Mi
+KTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/M
+iKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Ablordeppey.pdf (1 page, 197926 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
