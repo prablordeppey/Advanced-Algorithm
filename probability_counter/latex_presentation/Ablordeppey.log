@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.24)  17 DEC 2021 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.24)  19 DEC 2021 10:38
 entering extended mode
 **./Ablordeppey.tex
 (Ablordeppey.tex
@@ -207,6 +207,24 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen172
 \Gin@req@width=\dimen173
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/dblfloatfix\dblfloatfi
+x.sty
+Package: dblfloatfix 2012/12/31 v1.0a (JAW)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/base\fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+)
+\@dblbotnum=\count284
+\c@dblbotnumber=\count285
 ) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -227,7 +245,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/algorithm2e\algorithm2
 e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count284
+\c@AlgoLine=\count286
  (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
@@ -236,7 +254,7 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.st
 y
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count285
+\c@checkoddpage=\count287
 ) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
@@ -273,14 +291,14 @@ Package: relsize 2013/03/29 ver 4.1
 \algoheightrule=\skip69
 \algotitleheightruledefault=\skip70
 \algotitleheightrule=\skip71
-\c@algocfline=\count286
-\c@algocfproc=\count287
-\c@algocf=\count288
+\c@algocfline=\count288
+\c@algocfproc=\count289
+\c@algocf=\count290
 \algocf@algoframe=\box60
 \algocf@algobox=\box61
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
-8.
+9.
 
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -288,39 +306,39 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
 ftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count289
+\l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box62
 ) (Ablordeppey.aux)
 \openout1 = `Ablordeppey.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
 
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
+\scratchcounter=\count292
 \scratchdimen=\dimen180
 \scratchbox=\box63
-\nofMPsegments=\count291
-\nofMParguments=\count292
+\nofMPsegments=\count293
+\nofMParguments=\count294
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count293
+\MPscratchCnt=\count295
 \MPscratchDim=\dimen181
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
 \everyMPtoPDFconversion=\toks26
 )
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
@@ -333,69 +351,113 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
 
  (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
 
  (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (124.07692pt too wide) in paragraph at lines 86--97
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[1{C:/Users/iCETEE/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
+
+]
+<imgs/exact.png, id=24, 433.62pt x 289.08pt>
+File: imgs/exact.png Graphic file (type png)
+<use imgs/exact.png>
+Package pdftex.def Info: imgs/exact.png  used on input line 163.
+(pdftex.def)             Requested size: 260.98784pt x 200.74901pt.
+
+Overfull \hbox (24.82997pt too wide) in paragraph at lines 163--164
+ [][] 
+ []
+
+
+Underfull \vbox (badness 3724) has occurred while \output is active []
+
+<imgs/fixed.png, id=26, 433.62pt x 289.08pt>
+File: imgs/fixed.png Graphic file (type png)
+<use imgs/fixed.png>
+Package pdftex.def Info: imgs/fixed.png  used on input line 208.
+(pdftex.def)             Requested size: 260.98784pt x 200.74901pt.
+
+Overfull \hbox (24.82997pt too wide) in paragraph at lines 208--209
+ [][] 
+ []
+
+[2 <./imgs/exact.png> <./imgs/fixed.png>]
+Overfull \hbox (47.31075pt too wide) in paragraph at lines 243--254
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--97
+Underfull \hbox (badness 10000) in paragraph at lines 243--254
 
  []
 
+<imgs/decreasing.png, id=36, 433.62pt x 289.08pt>
+File: imgs/decreasing.png Graphic file (type png)
+<use imgs/decreasing.png>
+Package pdftex.def Info: imgs/decreasing.png  used on input line 260.
+(pdftex.def)             Requested size: 281.0623pt x 200.74901pt.
 
-Underfull \vbox (badness 2644) has occurred while \output is active []
+Overfull \hbox (44.90443pt too wide) in paragraph at lines 260--261
+ [] 
+ []
 
-
-(Ablordeppey.bbl) [1{C:/Users/iCETEE/AppData/Local/MiKTeX/pdftex/config/pdftex.
-map}
-
-
-] (Ablordeppey.aux) ) 
+(Ablordeppey.bbl) [3 <./imgs/decreasing.png>] (Ablordeppey.aux) ) 
 Here is how much of TeX's memory you used:
- 5728 strings out of 478927
- 85505 string characters out of 2852060
- 426644 words of memory out of 3000000
- 23494 multiletter control sequences out of 15000+600000
- 426795 words of font info for 83 fonts, out of 8000000 for 9000
+ 5804 strings out of 478927
+ 87180 string characters out of 2852060
+ 430512 words of memory out of 3000000
+ 23557 multiletter control sequences out of 15000+600000
+ 428380 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,11n,68p,831b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/enc/d
-vips/base/8r.enc}<C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cmextra/cmbsy9.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/iCETEE/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/iCETEE/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/iCETEE/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users
-/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-<C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmex
-tra/cmmib6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cmextra/cmmib9.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/iCETEE/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/iCETEE/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/iCETEE/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/iCET
-EE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/U
-sers/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-symbols/msam10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTe
-X/fonts/type1/urw/times/utmb8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKT
-eX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/Mi
-KTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/M
-iKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Ablordeppey.pdf (1 page, 197926 bytes).
+ 58i,13n,68p,840b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/iCET
+EE/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/iCETEE/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb><C:
+/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx
+6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmbx9.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/iCETEE/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/iCETEE/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/iCETEE
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Use
+rs/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pf
+b><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cmextra/cmmib5.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/iCETEE/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb><C:/Users/iCETEE/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/iCET
+EE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Us
+ers/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pf
+b><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr8.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/iCETEE/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/iCETEE/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/iCETEE/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users
+/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb
+8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
+bi8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmr8a.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
+utmri8a.pfb>
+Output written on Ablordeppey.pdf (3 pages, 324034 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

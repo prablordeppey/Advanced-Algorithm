@@ -31,6 +31,7 @@
 %\usepackage{longtable}
 \usepackage{arydshln}
 \usepackage{graphicx}
+\usepackage{dblfloatfix} % fix for table placement
 
 
 %% ALGORITHM 1 PROCEEDURES-----------------------------------------
@@ -50,77 +51,228 @@
 	%\Header{Volume}{Number}{Month}{Year}{InitialPage}
 	% Note: the month must be in Portuguese
 	
-	\title{The Minimum Cut Problem For An Undirected Graph}
+	\title{Probabilistic Counters}
 	\author{ABLORDEPPEY Prosper} % or \author{... \and ...}
 	\maketitle
 	
 	\begin{abstract}% Note: in English
-		In this project, the goal is to count the number of occurrences of letters in text files and, for instance, identify the most common ones. Three types of counters were analyzed. The \textit{Exact Counter}; which provides the exact count or frequency of each letter present in the text, the \textit{Fixed Probability Counter}, which approximates the frequency or number of counts of each letter in the text using a fixed probability value of $\dfrac{1}{2}$. The last counting method considered, being the \textit{Decreasing Probability Counter} approximates the count of each letter in the text with each future encounter of the letter having a decreased probability of being counter, with probability $(\dfrac{1}{\sqrt{2}^k})$ where $k$ is the number of occurrence of the letter of interest.
+		In this project, the goal is to count the number of occurrences of letters in text files and, for instance, identify the most common ones. Three types of counters were analyzed. The \textit{Exact Counter}; which provides the exact count or frequency of each letter present in the text, the \textit{Fixed Probability Counter}, which approximates the frequency or number of counts of each letter in the text using a fixed probability value of $\frac{1}{2}$. The last counting method considered, being the \textit{Decreasing Probability Counter} approximates the count of each letter in the text with each future encounter of the letter having a decreased probability of being counter, with probability $\left(\frac{1}{\sqrt{2}^k}\right)$ where $k$ is the number of occurrence of the letter of interest.
 	\end{abstract}
 	
 %	\begin{resumo}% Note: in Portuguese
 %		...
 %	\end{resumo}
 	
-%	\begin{keywords}% Note: in English (optional)
-%		...
-%	\end{keywords}
+	\begin{keywords}% Note: in English (optional)
+		\begin{enumerate}
+			\item Let $k_n$ denote the counter value of a given counter for the $n'th$ occurrence of a letter in the text stream.
+			\item Let $\mathbb{E}[k_n]$ denote the Expected Counter Value for the $n'th$ occurrence.
+			\item From a Counter Value $k_n$, we denote an estimate of the actual/exact number of occurrence for $n$ as $\hat{n}$.
+		\end{enumerate}
+	\end{keywords}
 	
 %	\begin{palavraschave}% Note: in Portuguese (optional)
 %		...
 %	\end{palavraschave}
 
-	\section{Notation and Problem Definition}
+	\section{Basic Derivations}
+		Let $X_i$ be a random variable modeling the $i'th$ increment with binary states $S=\{0,1\}$ where $X_i=0$ is the event of not increasing the counter value and $X_i=1$ be the event of increasing the counter value.\\
+		 
+		Again, let $p$ and $q$ be the probability of increasing and not increasing the counter value respectively. Thus
+		\begin{align*}
+			\mathbb{P}(X_i=1)&=p \\
+			\mathbb{P}(X_i=0)&=1-p=q
+		\end{align*}
+		\begin{align*}
+			\intertext{Moments}
+			\mathbb{E}[X] &= \sum_{i\in S}x_i\cdot \mathbb{P}(x=i) \tag{1}\\
+			&=0\cdot (1-p)+1\cdot p=p \\
+			\therefore \mathbb{E}[X] &= p \\
+			\mathbb{E}[X^2] &= \sum_{i\in S}x_i^2\cdot \mathbb{P}(x=i)\\
+			&=0^2\cdot (1-p)+1^2\cdot p=p \\
+			\therefore \mathbb{E}[X^2] &= p \\
+		\end{align*}
+		\begin{align*}
+			\intertext{For the $n'th$ occurrence, the counter value is expressed as}
+			k_n &= \sum_{i=1}^{n}X_i \\
+			\mathbb{E}[k_n]&=\mathbb{E}\left[\sum_{i=1}^{n}X_i\right]\\
+			&=\sum_{i=1}^{n}\mathbb{E}[X] \\
+			&=n\cdot \mathbb{E}[X] \\
+			&=n\cdot p
+		\end{align*}
+		\begin{align*}
+			\sigma^2[k_n]&=\sum_{i=1}^{n}\sigma^2\left[X\right]\\
+			&=\sum_{i=1}^{n}\left[\mathbb{E}[X^2]-\mathbb{E}[X]^2\right] \\
+			&=\sum_{i=1}^{n}\left[p-p^2\right]\\
+			&=n(p-p^2) \\
+			&=n\cdot p\cdot=(1-p)=n\cdot p\cdot q
+		\end{align*}
+		It has been shown from the above that, for the $n'th$ occurrence of a given letter, the expected counter value, variance and standard deviation are expressed respectively as;
+		\begin{align}
+			\mathbb{E}[k_n] = n\cdot p \label{equation1}\\
+			\sigma^2[k_n] = n\cdot p\cdot q \label{equation2}\\
+			\sigma[k_n] = \sqrt{n\cdot p\cdot q} \label{equation3}
+		\end{align}
 		
 			
 	\section{Outline Of Implementation}
 		
 	 	
-	 \section{EXACT COUNTER}
-	 
+	\section{EXACT COUNTER}
+		For this counter, the probability of increasing the counter value for a given new encounter of the letter $p=1$. Anytime a new letter is observed from the text stream, the counter value get increased. Thus, $q=0$.
+		Hence, the expected value, variance and standard deviation of the counter values is given as
+		\begin{align*}
+			\mathbb{E}[k_n] &= n\cdot p\\
+			&=n\cdot 1=n \\
+			\sigma^2[k_n] &= n\cdot p\cdot q\\
+			&=n\cdot 1 \cdot 0=0 \\
+			\sigma[k_n] &= \sqrt{n\cdot p\cdot q}\\
+			&=\sqrt{n\cdot 1\cdot 0}=0
+		\end{align*}
 		
+		The Table (\ref{table:exactCounterExpectedEstimate}) below presents the expected counter value for a given occurrence $n$ of a particular letter in a given text stream. The estimated occurrence from the $(k_n)$ counter values given as $(\widehat{n})$ is an identity relation.\\
+		More formally,
+		\begin{align*}
+			\widehat{n} &= \mathbb{E}[k_n]
+		\end{align*}
+		
+		Although such a counter will report the accurate/exact number of occurrence of each letter in the text stream, for large text streams, this becomes a problem as it occupies a lot of memory, hence, expensive. This motivates the notion of analyzing approximate counters with fixed probability and decreasing probabilities.
+		\begin{table}[ht!]
+			\begin{center}
+				\label{table:exactCounterExpectedEstimate}
+				\caption{Exact Counter Estimates}	
+				{\def\arraystretch{2}%
+					\begin{tabular}{l|l|c|c}
+						\toprule
+						Occurrence $(n)$ & Expected Value& $\mathbb{E}[k_n]$ & $\hat{n}$\\
+						\hline
+						1 & 1 & 1 & 1\\
+						3 & $1+1+1$&3 & 3\\
+						13 & $\mathbb{E}[k_{11}]+1+1$&13& 13\\
+						27 & $\mathbb{E}[k_{25}]+1+1$&27 & 27\\
+						51 & $\mathbb{E}[k_{49}]+1+1$&51 & 51\\
+						\bottomrule
+					\end{tabular}
+				}
+			\end{center}
+		\end{table}
+	 	
+	 	\begin{figure}[ht!]
+	 		\centering
+	 		\caption{Exact Expected Counter Estimates}
+	 		\includegraphics[width=260px, height=200px]{imgs/exact.png}		
+	 	\end{figure}
+		
+				
 	\section{FIXED PROBABILITY COUNTER}
-		\begin{table}[h]
-			\caption{}
-			{\def\arraystretch{2}%
-			\begin{tabular}{l|l|l}
-				\toprule
-				Number of Events & $\mathbb{E}[S]$ & Expected Counter Value\\
-				\hline
-				1 & 1 & 1 \\
-				5 & $1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&2\\
-				13 & $\mathbb{E}[S]_{10}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&3 \\
-				27 & $1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&4 \\
-				51 & $1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$&4 \\
-			\end{tabular}
-			}
+		With this counter, the probability of increasing and decreasing the counter are equal. Thus $p=q=\frac{1}{2}$.
+		Inferring from Equations (\ref{equation1}), (\ref{equation2}) and (\ref{equation3});
+		\begin{align*}
+			\mathbb{E}[k_n] &= n\cdot p\\
+			&=n\cdot \frac{1}{2}=\frac{n}{2} \\
+			\sigma^2[k_n] &= n\cdot p\cdot q\\
+			&=n\cdot \frac{1}{2} \cdot \frac{1}{2}=\frac{n}{4} \\
+			\sigma[k_n] &= \sqrt{n\cdot p\cdot q}\\
+			&=\sqrt{n\cdot \frac{1}{2}\cdot \frac{1}{2}}=\frac{\sqrt{n}}{2}
+		\end{align*}
+	
+		An expression for $\widehat{n}$ from the counter value $k_n$ for this counter is expressed as
+		\begin{align*}
+			\widehat{n}&= 2\cdot \mathbb{E}[k_n]
+		\end{align*}
+		This estimate relation evaluates to the actual number of occurrence $(n)$. The memory allocation for this counter is lesser than that of the exact counter by half $(\frac{1}{2})$.
+	
+		\begin{table}[!ht!]
+			\begin{center}
+				\label{table:fixedProbCounterExpectedEstimate}
+				\caption{Fixed Probability Counter Estimates $\left(p=\frac{1}{2}\right)$}	
+				{\def\arraystretch{2}%
+					\begin{tabular}{l|l|c|c}
+						\toprule
+						Occurrence $(n)$ & Expected Value& $\mathbb{E}[k_n]$ & $\widehat{n}$\\
+						\hline
+						2&$\frac{1}{2}+\frac{1}{2}$&1&1\\
+						4&$\mathbb{E}[k_{2}]+\frac{1}{2}+\frac{1}{2}$&2&4\\
+						6& $\mathbb{E}[k_{4}]+\frac{1}{2}+\frac{1}{2}$&3&6\\
+						28 & $\mathbb{E}[k_{26}]+\frac{1}{2}+\frac{1}{2}$&14&28\\
+						50 & $\mathbb{E}[k_{48}]+\frac{1}{2}+\frac{1}{2}$&25&50\\
+						\bottomrule
+					\end{tabular}
+				}
+			\end{center}
 		\end{table}
 	
-		We define an expression for the sum function as
-		\begin{align*}
-			\sum_{k=1}^{n}\frac{1}{2}=&\sum_{k=0}^{n-1}\frac{1}{2} \\
-			=&n\cdot \frac{1}{2}\\
-			=&\frac{n}{2}
-		\end{align*}
-		The complexity of this computation completes in $\mathcal
-		{O}\left(\frac{n}{2}\right)=\mathcal{O}(n)$ time.
+		\begin{figure}[ht!]
+			\centering
+			\caption{Fixed Prob Expected Counter Estimates}
+			\includegraphics[width=260px, height=200px]{imgs/fixed.png}		
+		\end{figure}	
 	
 	\section{DECREASING PROBABILITY COUNTER}
-		The above summation could be expressed as
+		The probability of increasing the counter value for a given occurrence in this case is given as $p=\frac{1}{\sqrt{2}^{k_n}}$. Hence, $q=1-\frac{1}{\sqrt{2}^{k_n}}$.
+		Inferring from Equations (\ref{equation1}), (\ref{equation2}) and (\ref{equation3});
 		\begin{align*}
-			\sum_{k=1}^{n}\dfrac{1}{\left(\sqrt{2}\right)^{k-1}}=&\sum_{k=0}^{n-1}\dfrac{1}{\left(\sqrt{2}\right)^{k}} \\
-			\intertext{To derive an upperbound, we derive an expression for the sum function as}
-			\sum_{k=1}^{n}\dfrac{1}{\left(\sqrt{2}\right)^{k-1}}=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2}\\
-			\intertext{We obtain an upperbound for the expected counts by evaluating the limit of this function as n becomes bigger and bigger}
-			\intertext{Let $\phi(S) \ge \mathbb{E}[s], \forall s $}
-			\phi(S)=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
-			=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2}\cdot \dfrac{\sqrt{2}+2}{\sqrt{2}+2}\\
-			=&\lim_{n\to \infty} 2^{\frac{1}{2}}+2-2^{\frac{1-n}{2}}-2^{\frac{2-n}{2}}
-			\intertext{As $k\to \infty$, $2^{-k} \to 0$}
-			\therefore \phi(S)=&\sqrt{2}+2 \\
-			\approx & 3.14142
+			\mathbb{E}[k_n] &= n\cdot p\\
+			&=n\cdot \frac{1}{\sqrt{2}^{k_n}}=\frac{n}{\sqrt{2}^{k_n}} \\
+			\sigma^2[k_n] &= n\cdot p\cdot q\\
+			&=n\cdot \frac{1}{\sqrt{2}^{k_n}} \cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) \\ 
+			&=\frac{n}{\sqrt{2}^{k_n}}\cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) \\
+			\sigma[k_n] &= \sqrt{n\cdot p\cdot q}\\
+			&=\sqrt{n\cdot \frac{1}{\sqrt{2}^{k_n}} \cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) }\\
+			&=\frac{\sqrt{n}}{2}
 		\end{align*}
 	
+	
+		The expected counter values for the various occurrences $n$, could be expressed as
+		\begin{align*}
+			\mathbb{E}[k_n]=&\sum_{k=1}^{n}\dfrac{1}{\left(\sqrt{2}\right)^{k-1}}=\sum_{k=0}^{n-1}\dfrac{1}{\left(\sqrt{2}\right)^{k}} \\
+%			\intertext{To derive an upperbound, we derive an expression for the sum function as}
+			=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
+			\therefore \mathbb{E}[k_n]=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \tag{3} \label{equation:3} 
+		\end{align*}
+	
+		An expression for $n$ estimate $\widehat{n}$ from the counter value is given by
+		\begin{align*}
+			\widehat{n} = 
+		\end{align*}
+	
+		
+		
+		\begin{table}[b!]
+			\label{table:decreasingProbCounterExpectedEstimate}
+			\caption{Decreasing Probability Counter Estimates $\left(prob=\frac{1}{(\sqrt{2})^k}\right)$}
+			{\def\arraystretch{2}%
+				\begin{tabular}{l|l|c}
+					\toprule
+					\# of Events & $\mathbb{E}[S]$ & Expected Counter Value\\
+					\hline
+					1 & 1 & 1 \\
+					3 & $1+\frac{1}{\sqrt{2}}+\frac{1}{(\sqrt{2})^2}$&2.2071\\
+					13 & $\mathbb{E}[S]_{11}+\frac{1}{(\sqrt{2})^{11}}+\frac{1}{(\sqrt{2})^{12}}$&3.3765 \\
+					27 & $\mathbb{E}[S]_{25}+\frac{1}{(\sqrt{2})^{25}}+\frac{1}{(\sqrt{2})^{26}}$&3.4139 \\
+					51 & $\mathbb{E}[S]_{49}+\frac{1}{(\sqrt{2})^{49}}+\frac{1}{(\sqrt{2})^{50}}$&3.4142 \\
+				\end{tabular}
+			}
+		\end{table}
+			
+		\begin{figure}
+			\begin{center}
+				\label{figure:decreasingProb}
+				\caption{Decreasing Prob Expected Counter Estimates}
+				\includegraphics[width=280px, height=200px]{imgs/decreasing.png}
+			\end{center}		
+		\end{figure}
+	
+		As it can be clearly observed from Fig. (\ref{figure:decreasingProb}), the expected counter values as $n\to \infty$ becomes constant for $n > 10$. Hence, we can determine the upper-bound for the expected counter values by evaluating the limit of the sum function of Equation (\ref{equation:3}) as $n \to \infty$.
+		\begin{align*}
+			\intertext{Let $\phi(k_n) \ge \mathbb{E}[k_n], \forall n$ be an upper-bound for $\mathbb{E}[k_n]$}
+			\phi(k_n)=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
+			=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2}\cdot \dfrac{\sqrt{2}+2}{\sqrt{2}+2}\\
+			=&\lim_{n\to \infty} 2^{\frac{1}{2}}+2-2^{\frac{1-n}{2}}-2^{\frac{2-n}{2}} \\
+			\therefore \phi(k_n)=&\sqrt{2}+2 \\
+			\approx & 3.14142
+		\end{align*}
+		Hence, after about $10$ events, the expected counter values for all future occurrences tend to approach $\sqrt{2}+2$.
 	
 	\section{Auxiliary Functions}
 	
