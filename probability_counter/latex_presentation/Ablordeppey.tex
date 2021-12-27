@@ -32,7 +32,7 @@
 \usepackage{arydshln}
 \usepackage{graphicx}
 \usepackage{dblfloatfix} % fix for table placement
-
+\usepackage{multirow}
 
 %% ALGORITHM 1 PROCEEDURES-----------------------------------------
 %\usepackage{algorithm}
@@ -48,9 +48,6 @@
 \SetCommentSty{mycommfont}
 
 % drawing trees
-\usepackage{tikz}
-\usetikzlibrary{trees}
-
 \usepackage{tikz}
 \usetikzlibrary{arrows, positioning, automata}
 
@@ -84,35 +81,69 @@
 %	\end{palavraschave}
 
 	\section{Basic Derivations}
-		Let $X_i$ be a random variable modeling the $i'th$ increment with binary states $S=\{0,1\}$ where $X_i=0$ is the event of not increasing the counter value and $X_i=1$ be the event of increasing the counter value.\\
+		\begin{figure}
+			\caption{Fixed Probability Tree}
+			\label{figure:fixedProbTree}
+			\begin{center}
+				\begin{tikzpicture}
+					[>=stealth',shorten >=0.5pt,node distance=1.8cm,on grid,initial/.style={}]
+					\node[state] (T1) {$0$};
+					\node[state] (T2) [below left =of T1] {$0$};
+					\node[state] (T3) [below right  =of T1] {$1$};
+					\node[state] (T4) [below left =of T2] {$0$};
+					\node[state] (T5) [below right  =of T2] {$1$};
+					\node[state] (T6) [below right =of T3] {$2$};
+					\node[state] (T7) [below left =of T4] {$0$};
+					\node[state] (T8) [below right =of T4] {$1$};
+					\node[state] (T9) [below right =of T5] {$2$};
+					\node[state] (T10) [below right =of T6] {$3$};
+					
+					\tikzset{mystyle/.style={->,double=orange}}
+					\tikzset{every node/.style={fill=white}}
+					
+					\path (T1) edge [mystyle] node {$q$} (T2);
+					\path (T1) edge [mystyle] node {$p$} (T3);
+					\path (T2) edge [mystyle] node {$q$} (T4);
+					\path (T2) edge [mystyle] node {$p$} (T5);
+					\path (T3) edge [mystyle] node {$q$} (T5);
+					\path (T3) edge [mystyle] node {$p$} (T6);					
+					\path (T4) edge [mystyle] node {$q$} (T7);
+					\path (T4) edge [mystyle] node {$p$} (T8);
+					\path (T5) edge [mystyle] node {$q$} (T8);
+					\path (T5) edge [mystyle] node {$p$} (T9);
+					\path (T6) edge [mystyle] node {$q$} (T9);
+					\path (T6) edge [mystyle] node {$p$} (T10);
+				\end{tikzpicture}
+			\end{center}
+		\end{figure}
+	
+		Fig (\ref{figure:fixedProbTree}) is the probability distribution tree of increasing the counter value for a fixed probability counter for three (3) occurrences. Let $X_i$ be a random variable modeling the $i'th$ increment of the counter with binary states $S=\{0,1\}$ where $X_i=0$ is the event of not increasing the counter value and $X_i=1$ be the event of increasing the counter value.\\
 		 
 		Again, let $p$ and $q$ be the probability of increasing and not increasing the counter value respectively. Thus
 		\begin{align*}
 			\mathbb{P}(X_i=1)&=p \\
 			\mathbb{P}(X_i=0)&=1-p=q
-		\end{align*}
-		\begin{align*}
+%		\end{align*}
+%		\begin{align*}
 			\intertext{Moments}
-			\mathbb{E}[X] &= \sum_{i\in S}x_i\cdot \mathbb{P}(x=i) \tag{1}\\
+			\mathbb{E}[X] &= \sum_{i\in S}x_i\cdot \mathbb{P}(x=i) \tag{I}\\
 			&=0\cdot (1-p)+1\cdot p=p \\
 			\therefore \mathbb{E}[X] &= p \\
-			\mathbb{E}[X^2] &= \sum_{i\in S}x_i^2\cdot \mathbb{P}(x=i)\\
+			\mathbb{E}[X^2] &= \sum_{i\in S}x_i^2\cdot \mathbb{P}(x=i) \tag{{II}}\\
 			&=0^2\cdot (1-p)+1^2\cdot p=p \\
-			\therefore \mathbb{E}[X^2] &= p \\
+			\therefore \mathbb{E}[X^2] &= p
 		\end{align*}
 		\begin{align*}
 			\intertext{For the $n'th$ occurrence, the counter value is expressed as}
 			k_n &= \sum_{i=1}^{n}X_i \\
-			\mathbb{E}[k_n]&=\mathbb{E}\left[\sum_{i=1}^{n}X_i\right]\\
-			&=\sum_{i=1}^{n}\mathbb{E}[X] \\
+			\mathbb{E}[k_n]&=\mathbb{E}\left[\sum_{i=1}^{n}X_i\right] = \sum_{i=1}^{n}\mathbb{E}[X] \\
 			&=n\cdot \mathbb{E}[X] \\
 			&=n\cdot p
 		\end{align*}
 		\begin{align*}
 			\sigma^2[k_n]&=\sum_{i=1}^{n}\sigma^2\left[X\right]\\
 			&=\sum_{i=1}^{n}\left[\mathbb{E}[X^2]-\mathbb{E}[X]^2\right] \\
-			&=\sum_{i=1}^{n}\left[p-p^2\right]\\
-			&=n(p-p^2) \\
+			&=\sum_{i=1}^{n}\left[p-p^2\right] = n(p-p^2) \\
 			&=n\cdot p\cdot=(1-p)=n\cdot p\cdot q
 		\end{align*}
 		It has been shown from the above that, for the $n'th$ occurrence of a given letter, the expected counter value, variance and standard deviation are expressed respectively as;
@@ -209,7 +240,6 @@
 				}
 			\end{center}
 		\end{table}
-	
 		\begin{figure}[ht!]
 			\centering
 			\caption{Fixed Prob Expected Counter Estimates}
@@ -217,14 +247,11 @@
 		\end{figure}	
 	
 	\section{DECREASING PROBABILITY COUNTER}
-	
-		% Define styles for bags and leafs
-		\tikzstyle{bag} = [text width=4em, text centered]
-		\tikzstyle{end} = [circle]
-		
-		\begin{figure}
+		\begin{figure}[!ht]
+			\caption{Decreasing Probability Tree}
+			\label{figure:decreasingProbTree}
 			\begin{center}
-				\begin{tikzpicture}[>=stealth',shorten >=1pt,node distance=2cm,on grid,initial/.style={}]
+				\begin{tikzpicture}[>=stealth',shorten >=2pt,node distance=2cm,on grid,initial/.style={}]
 					\node[state] (T1) {$0$};
 					\node[state] (T2) [below left =of T1] {$0$};
 					\node[state] (T3) [below right  =of T1] {$1$};
@@ -232,7 +259,7 @@
 					\node[state] (T5) [below right  =of T2] {$1$};
 					\node[state] (T6) [below right =of T3] {$2$};
 					\node[state] (T7) [below left =of T4] {$0$};
-					\node[state] (T8) [right =of T7] {$1$};
+					\node[state] (T8) [below right =of T4] {$1$};
 					\node[state] (T9) [below right =of T5] {$2$};
 					\node[state] (T10) [below right =of T6] {$3$};
 					
@@ -241,149 +268,136 @@
 					
 					\path (T1) edge [mystyle] node {$0$} (T2);
 					\path (T1) edge [mystyle] node {$1$} (T3);
-					
 					\path (T2) edge [mystyle] node {$0$} (T4);
 					\path (T2) edge [mystyle] node {$1$} (T5);
-					\path (T3) edge [mystyle] node {$1$} (T5);
-					\path (T3) edge [mystyle] node {$0$} (T6);
-					
+					\path (T3) edge [mystyle] node {$1-\frac{1}{\sqrt{2}}$} (T5);
+					\path (T3) edge [mystyle] node {$\frac{1}{\sqrt{2}}$} (T6);					
 					\path (T4) edge [mystyle] node {$0$} (T7);
-					\path (T4) edge [mystyle] node {$0$} (T8);
-					\path (T5) edge [mystyle] node {$0$} (T8);
-					\path (T5) edge [mystyle] node {$0$} (T9);
-					\path (T6) edge [mystyle] node {$0$} (T10);
-%					\path (T3) edge [mystyle] node {$1$} (T7);
+					\path (T4) edge [mystyle] node {$1$} (T8);
+					\path (T5) edge [mystyle] node {$1-\frac{1}{\sqrt{2}}$} (T8);
+					\path (T5) edge [mystyle] node {$\frac{1}{\sqrt{2}}$} (T9);
+					\path (T6) edge [mystyle] node {$1-\frac{1}{2}$} (T9);
+					\path (T6) edge [mystyle] node {$\frac{1}{2}$} (T10);
 				\end{tikzpicture}
-				\caption{Corrected Acyclic Graph}
 			\end{center}
 		\end{figure}
 		
-		
-		\begin{figure}
-			\begin{tikzpicture}[>=stealth',shorten >=1pt,node distance=2cm,on grid,initial/.style={}]
-				\node[state] (T1) {$T1$};
-				\node[state] (T4) [below =of T1] {$T4$};
-				\node[state] (T3) [left  =of T4] {$T3$};
-				\node[state] (T2) [left  =of T3] {$T2$};
-				\node[state] (T5) [right =of T4] {$T5$};
-				\node[state] (T6) [right =of T5] {$T6$};
-				\node[state] (T8) [below =of T4] {$T8$};
-				\node[state] (T7) [left  =of T8] {$T7$};
-				\node[state] (T9) [right =of T8] {$T9$};
-				\node[state] (T10) [below =of T8] {$T10$};
-				
-				\tikzset{mystyle/.style={->,double=orange}}
-				\tikzset{every node/.style={fill=white}}
-				\path (T1) edge [mystyle] node {$18$} (T2);
-				\path (T1) edge [mystyle] node {$12$} (T3);
-				\path (T1) edge [mystyle] node {$9$}  (T4);
-				\path (T1) edge [mystyle] node {$11$} (T5);
-				\path (T1) edge [mystyle] node {$14$} (T6);
-%				\path (T2) edge [mystyle] node {$19$} (T8);
-				\path (T2) edge [mystyle] node {$16$} (T9);
-%				\path (T3) edge [mystyle] node {$23$} (T7);
-				
-				\path (T2) edge [mystyle] node[pos=0.7] {$19$} (T8);
-				\path (T3) edge [mystyle] node[pos=0.7] {$23$} (T7);
-				\path (T4) edge [mystyle] node {$27$} (T8);
-				\path (T4) edge [mystyle] node {$23$} (T9);
-				\path (T5) edge [mystyle] node {$13$} (T9);
-				\path (T6) edge [mystyle] node {$15$} (T8);
-				\path (T7) edge [mystyle] node {$17$} (T10);
-				\path (T8) edge [mystyle] node {$11$} (T10);
-				\path (T9) edge [mystyle] node {$13$} (T10);
-			\end{tikzpicture}
-			\caption{Corrected Acyclic Graph}
-		\end{figure}
-		
-		\begin{tikzpicture}[level distance=1.3cm,
-			level 1/.style={sibling distance=4cm},
-			level 2/.style={sibling distance=1.6cm}]
-			level 3/.style={sibling distance=0.1cm}]
-%			\tikzstyle{every node}=[circle,draw]
-			
-%			\node (Root) [red] {0}
-			\node (Root) {0}
-			
-			child {
-%				node{0}
-				node[] {0}
-				edge from parent[black]
-%				node[above] {3}
-%				node[below]  {$\frac{4}{9}$}
-				child{
-					node {0}
-					edge from parent[black]
-					child {
-						node[black] {0}
-						edge from parent[black]
-					}
-					child { 
-						node {1} 
-					} 
-				}
-				child { 
-					node {1}
-					child { 
-						node {1} 
-					}
-					child { 
-						node {2} 
-					}
-				}
-			}
-			child {
-				node {1} 
-				child { 
-					node {2}
-					child { 
-						node {3} 
-					}
-					child { 
-						node {2} 
-					}
-				}
-				child { 
-					node {1}
-					child { 
-						node {2} 
-					}
-					child { 
-						node {1} 
-					}
-				}
-			};
-		\end{tikzpicture}
-	
-		The probability of increasing the counter value for a given occurrence in this case is given as $p=\frac{1}{\sqrt{2}^{k_n}}$. Hence, $q=1-\frac{1}{\sqrt{2}^{k_n}}$.
-		Inferring from Equations (\ref{equation1}), (\ref{equation2}) and (\ref{equation3});
+		The probability of increasing the counter value for a given occurrence represented in Fig (\ref{figure:decreasingProbTree}) in this case is given as $p=\frac{1}{\sqrt{2}^{k_n}}$. Hence, $q=1-\frac{1}{\sqrt{2}^{k_n}}$.
+		Just as obtained from Equations (\ref{equation1}), (\ref{equation2}) and (\ref{equation3}), we derive similar equations for the Expected Counter value, Variance and Standard deviations.
 		\begin{align*}
-			\mathbb{E}[k_n] &= n\cdot p\\
-			&=n\cdot \frac{1}{\sqrt{2}^{k_n}}=\frac{n}{\sqrt{2}^{k_n}} \\
-			\sigma^2[k_n] &= n\cdot p\cdot q\\
-			&=n\cdot \frac{1}{\sqrt{2}^{k_n}} \cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) \\ 
-			&=\frac{n}{\sqrt{2}^{k_n}}\cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) \\
-			\sigma[k_n] &= \sqrt{n\cdot p\cdot q}\\
-			&=\sqrt{n\cdot \frac{1}{\sqrt{2}^{k_n}} \cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) }\\
-			&=\frac{\sqrt{n}}{2}
+			\mathbb{E}[X] = &\sum_{i\in S}x_i\cdot \mathbb{P}(x=i) \tag{a} \\
+			\mathbb{E}[X^2] =& \sum_{i\in S}x_i^2\cdot \mathbb{P}(x=i) \tag{b}
 		\end{align*}
+		Now, we compute the expected counter values for the various occurrences $n$.
+		
+		{\def\arraystretch{1.4}%
+			\begin{center}
+				\begin{tabular}{c|c|l|c} 
+					\hline
+					n & x &$\mathbb{P}[X=x]$&$\mathbb{P}[X=x]$\\
+					\hline
+					 \multirow{2}{4em}{1}&0 &0 &0\\
+					 &1&1&1\\
+					 \hline
+					 \multirow{3}{4em}{2}&0 &$0\cdot 0$ &0\\
+					 &1&$0\cdot 1+1\cdot \left(1-\frac{1}{\sqrt{2}}\right)$&$1-\frac{1}{\sqrt{2}}$\\
+					 &2&$1\cdot \frac{1}{\sqrt{2}}$&$\frac{1}{\sqrt{2}}$\\
+					 \hline
+					 \multirow{4}{4em}{3}&0 &$0\cdot 0\cdot0$&$0$\\
+					 &1&$0+0+(1-\frac{1}{\sqrt{2}})(1-\frac{1}{\sqrt{2}})$&$\frac{3}{2}-\sqrt{2}$\\
+					 &2&$0+\frac{1}{2\sqrt{2}}+\left(1-\frac{1}{\sqrt{2}}\right)\cdot \frac{1}{\sqrt{2}}$&$\frac{3}{2\sqrt{2}}-\frac{1}{2}$\\
+					 &3&$1\cdot \frac{1}{\sqrt{2}}\cdot \frac{1}{2}$&$\frac{\sqrt{2}}{4}$\\
+					 \hline
+				\end{tabular}
+			\end{center}
+		}
+	
+%		\begin{center}
+%			\begin{tabular}{|l|c|l|l|c|c|} 
+%				\hline
+%				n & x &$\mathbb{P}[X=x]$&$\mathbb{E}[n]=k_n$&$\mathbb{E}[X^2]$&$\sigma^2(X)$\\
+%				\hline
+%				\multirow{2}{0.5cm}{1}&0 &0&\multirow{2}{1cm}{1}&\multirow{2}{2cm}{1}&\multirow{2}{1cm}{0}\\
+%				&1&1&&&\\
+%				\hline
+%				
+%				\multirow{3}{0.5cm}{2}&0 &0&\multirow{3}{2cm}{$\lfloor 1+\frac{1}{\sqrt{2}}\rfloor =1$}&\multirow{3}{1cm}{$1+\frac{3}{\sqrt{2}}$}&\multirow{2}{1cm}{$\frac{1}{\sqrt{2}}-\frac{1}{2}$}\\
+%				&1&$1-\frac{1}{\sqrt{2}}$&&&\\
+%				&2&$\frac{1}{\sqrt{2}}$&&&\\
+%				\hline
+%				
+%				\multirow{4}{0.5cm}{3}
+%				&0 
+%				&$0$
+%				&\multirow{4}{2cm}{$\lfloor \frac{1}{2}+\frac{5}{2\sqrt{2}}\rfloor =2$}
+%				&\multirow{4}{1cm}{$\frac{17}{2\sqrt{2}}-\frac{1}{2}$}
+%				&\multirow{4}{1cm}{$3\sqrt{2}-\frac{31}{8}$}\\
+%				&1&$\frac{3}{2}-\sqrt{2}$&&&\\
+%				&2&$\frac{3}{2\sqrt{2}}-\frac{1}{2}$&&&\\
+%				&3&$\frac{\sqrt{2}}{4}$&&&\\
+%				\hline
+%			\end{tabular}
+%		\end{center}
+		{\def\arraystretch{1.4}%
+			\begin{center}
+				\begin{tabular}{l|c|l|l|c} 
+					\hline
+					n & x &$\mathbb{E}[n]=k_n$&$\mathbb{E}[X^2]$&$\sigma^2(X)$\\
+					\hline
+					\multirow{2}{0.5cm}{1}&0 &\multirow{2}{1cm}{1}&\multirow{2}{2cm}{1}&\multirow{2}{1.5cm}{0}\\
+					&1&&&\\
+					\hline
+					
+					\multirow{3}{0.5cm}{2}&0 &\multirow{3}{2cm}{$\lfloor 1+\frac{1}{\sqrt{2}}\rfloor =1$}&\multirow{3}{2cm}{$1+\frac{3}{\sqrt{2}}$}&\multirow{2}{1.5cm}{$\frac{1}{\sqrt{2}}-\frac{1}{2}$}\\
+					&1&&&\\
+					&2&&&\\
+					\hline
+					
+					\multirow{4}{0.5cm}{3} &0 &\multirow{4}{2.1cm}{$\lfloor \frac{1}{2}+\frac{5}{2\sqrt{2}}\rfloor =2$}
+					&\multirow{4}{2cm}{$\frac{17}{2\sqrt{2}}-\frac{1}{2}$}
+					&\multirow{4}{1.5cm}{$3\sqrt{2}-\frac{31}{8}$}\\
+					&1&&&\\
+					&2&&&\\
+					&3&&&\\
+					\hline
+				\end{tabular}
+			\end{center}
+		}
+	
+%		\begin{align*}
+%			\mathbb{E}[X] &= \sum_{i\in S}x_i\cdot \mathbb{P}(x=i) \tag{1}\\
+%			&= \\
+%			\therefore \mathbb{E}[X] &= p \\
+%			\mathbb{E}[X^2] &= \sum_{i\in S}x_i^2\cdot \mathbb{P}(x=i)\\
+%			&=0^2\cdot (1-p)+1^2\cdot p=p \\
+%			\therefore \mathbb{E}[X^2] &= p \\
+%		\end{align*}
+		
+%		\begin{align*}
+%			\mathbb{E}[k_n] &= n\cdot p\\
+%			&=n\cdot \frac{1}{\sqrt{2}^{k_n}}=\frac{n}{\sqrt{2}^{k_n}} \\
+%			\sigma^2[k_n] &= n\cdot p\cdot q\\
+%			&=n\cdot \frac{1}{\sqrt{2}^{k_n}} \cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) \\ 
+%			&=\frac{n}{\sqrt{2}^{k_n}}\cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) \\
+%			\sigma[k_n] &= \sqrt{n\cdot p\cdot q}\\
+%			&=\sqrt{n\cdot \frac{1}{\sqrt{2}^{k_n}} \cdot \left(1-\frac{1}{\sqrt{2}^{k_n}}\right) }\\
+%			&=\frac{\sqrt{n}}{2}
+%		\end{align*}
 	
 	
-		The expected counter values for the various occurrences $n$, could be expressed as
-		\begin{align*}
-			\mathbb{E}[k_n]=&\sum_{k=1}^{n}\dfrac{1}{\left(\sqrt{2}\right)^{k-1}}=\sum_{k=0}^{n-1}\dfrac{1}{\left(\sqrt{2}\right)^{k}} \\
-%			\intertext{To derive an upperbound, we derive an expression for the sum function as}
-			=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
-			\therefore \mathbb{E}[k_n]=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \tag{3} \label{equation:3} 
-		\end{align*}
+%		The expected counter values for the various occurrences $n$, could be expressed as
+%		\begin{align*}
+%			\mathbb{E}[k_n]=&\sum_{k=1}^{n}\dfrac{1}{\left(\sqrt{2}\right)^{k-1}}=\sum_{k=0}^{n-1}\dfrac{1}{\left(\sqrt{2}\right)^{k}} \\
+%%			\intertext{To derive an upperbound, we derive an expression for the sum function as}
+%			=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
+%			\therefore \mathbb{E}[k_n]=&\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \tag{3} \label{equation:3} 
+%		\end{align*}
 	
 		An expression for $n$ estimate $\widehat{n}$ from the counter value is given by
 		\begin{align*}
-			\widehat{n} = 
+			\widehat{n} = 2^{(k-1)} \ni k=\lfloor k_n\rfloor
 		\end{align*}
 	
-		
-		
 		\begin{table}[b!]
 			\label{table:decreasingProbCounterExpectedEstimate}
 			\caption{Decreasing Probability Counter Estimates $\left(prob=\frac{1}{(\sqrt{2})^k}\right)$}
@@ -408,17 +422,16 @@
 				\includegraphics[width=280px, height=200px]{imgs/decreasing.png}
 			\end{center}		
 		\end{figure}
-	
-		As it can be clearly observed from Fig. (\ref{figure:decreasingProb}), the expected counter values as $n\to \infty$ becomes constant for $n > 10$. Hence, we can determine the upper-bound for the expected counter values by evaluating the limit of the sum function of Equation (\ref{equation:3}) as $n \to \infty$.
-		\begin{align*}
-			\intertext{Let $\phi(k_n) \ge \mathbb{E}[k_n], \forall n$ be an upper-bound for $\mathbb{E}[k_n]$}
-			\phi(k_n)=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
-			=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2}\cdot \dfrac{\sqrt{2}+2}{\sqrt{2}+2}\\
-			=&\lim_{n\to \infty} 2^{\frac{1}{2}}+2-2^{\frac{1-n}{2}}-2^{\frac{2-n}{2}} \\
-			\therefore \phi(k_n)=&\sqrt{2}+2 \\
-			\approx & 3.14142
-		\end{align*}
-		Hence, after about $10$ events, the expected counter values for all future occurrences tend to approach $\sqrt{2}+2$.
+%		As it can be clearly observed from Fig. (\ref{figure:decreasingProb}), the expected counter values as $n\to \infty$ becomes constant for $n > 10$. Hence, we can determine the upper-bound for the expected counter values by evaluating the limit of the sum function of Equation (\ref{equation:3}) as $n \to \infty$.
+%		\begin{align*}
+%			\intertext{Let $\phi(k_n) \ge \mathbb{E}[k_n], \forall n$ be an upper-bound for $\mathbb{E}[k_n]$}
+%			\phi(k_n)=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2} \\
+%			=&\lim_{n\to \infty}\dfrac{2^{(1-\frac{n}{2})}-2}{\sqrt{2}-2}\cdot \dfrac{\sqrt{2}+2}{\sqrt{2}+2}\\
+%			=&\lim_{n\to \infty} 2^{\frac{1}{2}}+2-2^{\frac{1-n}{2}}-2^{\frac{2-n}{2}} \\
+%			\therefore \phi(k_n)=&\sqrt{2}+2 \\
+%			\approx & 3.14142
+%		\end{align*}
+%		Hence, after about $10$ events, the expected counter values for all future occurrences tend to approach $\sqrt{2}+2$.
 	
 	\section{Auxiliary Functions}
 	
