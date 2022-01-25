@@ -1,17 +1,7 @@
 \begin{thebibliography}{1}
 
-\bibitem{black2012greedy}
-Paul~E Black.
-\newblock greedy algorithm, dictionary of algorithms and data structures.
-\newblock {\em US Nat. Inst. Std. \& Tech Report}, 88:95, 2012.
-
-\bibitem{adjacencymatrixdefinition}
-Nykamp DQ.
-\newblock Adjacency matrix definition.
-
-\bibitem{mincutandkargersalgorithm}
-Anthony Kim.
-\newblock Min cut and karger's algorithm : Min cut and karger's algorithm,
-  2016.
+\bibitem{letter_frequency}
+letterfrequency.org.
+\newblock letter-frequency-by-language.
 
 \end{thebibliography}
