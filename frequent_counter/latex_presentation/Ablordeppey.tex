@@ -1,0 +1,183 @@
+%
+% General structure for the revdetua class:
+%
+\documentclass[longpaper, english, final, times]{revdetua}
+%
+% Valid options are:
+%
+%   longpaper --------- \part and \tableofcontents defined
+%   shortpaper -------- \part and \tableofcontents not defined (default)
+%
+%   english ----------- main language is English (default)
+%   portugues --------- main language is Portuguese
+%
+%   draft ------------- draft version
+%   final ------------- final version (default)
+%
+%   times ------------- use times (postscript) fonts for text
+%
+%   mirror ------------ prints a mirror image of the paper (with dvips)
+%
+%   visiblelabels ----- \SL, \SN, \SP, \EL, \EN, etc. defined
+%   invisiblelabels --- \SL, \SN, \SP, \EL, \EN, etc. not defined (default)
+%
+% Note: the final version should use the times fonts
+% Note: the really final version should also use the mirror option
+%
+
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{booktabs} % To thicken table lines
+%\usepackage{longtable}
+\usepackage{arydshln}
+\usepackage{graphicx}
+\usepackage{dblfloatfix} % fix for table placement
+\usepackage{multirow}
+\usepackage{subfigure}
+
+%% DIRECTORY TREE REPRESENTATION
+\usepackage{forest}
+
+\begin{document}
+	
+	%\Header{Volume}{Number}{Month}{Year}{InitialPage}
+	% Note: the month must be in Portuguese
+	
+	\title{THE MOST FREQUENT WORDS\\Project Three (3)}
+	\author{ABLORDEPPEY Prosper} % or \author{... \and ...}
+	\maketitle
+	
+	\begin{abstract}% Note: in English
+		The goal of this project is to determine the most frequent words of each one of some literary works and compare the results obtained with the exact counts. The algorithm developed by Misra \& Gries for determining at most $(k-1)$ frequent items in a data stream was adopted in this presentation,
+		finding the words that occur more than $\left(\frac{n}{k}\right)$ times in the data stream.
+	\end{abstract}
+
+	\begin{keywords}
+		n -: total number of unique elements in the stream, k -: number of counters used by the misra-greis algorithm.
+	\end{keywords}
+	
+	\section*{Project Outline}
+		The outline of the project in order is given as.
+		\begin{itemize}
+			\item Introduction
+			\item Project Directory Structure
+			\item A Midsummer Nights Dream
+			\item The Hamlet
+			\item Conclusion
+		\end{itemize}
+	
+	\section{Introduction}
+		The literary works considered in this project are two (2) works of \textbf{Shakespeare} with each, translated in three (3) different languages \textit{English, French} and \textit{German}.
+		The titles of these works in English are;
+		\textbf{A Midsummer Nights Dream} and \textbf{The Hamlet}
+	
+		
+	\section{Project Directory Structure}
+		The folder structure for this project is graphically given in Fig. (\ref{figure:projectDirectoryStructure}). 
+		From the representation, the project has two (2) directories and the \textit{FrequentCounter} python notebook file. Detailed description is presented below;
+		\begin{figure}[!ht]
+			\begin{center}
+				\begin{forest}
+					for tree={
+						font=\ttfamily,
+						grow'=0,
+						child anchor=west,
+						parent anchor=south,
+						anchor=west,
+						calign=first,
+						edge path={
+							\noexpand\path [draw, \forestoption{edge}]
+							(!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+						},
+						before typesetting nodes={
+							if n=1
+							{insert before={[,phantom]}}
+							{}
+						},
+						fit=band,
+						before computing xy={l=15pt},
+					}
+					[Project-Three(3)
+					[shakespeare
+					[hamlet-english.txt]
+					[hamlet-french.txt]
+					[hamlet-german.txt]
+					[...]
+					]
+					[output
+					[hamlet-english.csv]
+					[hamlet-french.csv]
+					[hamlet-german.csv]
+					[...]
+					]
+					[FrequentCounter.ipynb]
+					]
+				\end{forest}
+			\end{center}
+			\caption{Project Directory Structure}
+			\label{figure:projectDirectoryStructure}
+		\end{figure}
+		
+		\begin{itemize}
+			\setlength\itemsep{1em}
+			\item \textbf{shakespeare directory} :- This folder hosts two (2) literary works of Shakespeare considered in this project. In total, the folder has $2\cdot 3=6$ literary works since each work has translations in English, French and German. For instance, Hamlet has variations, \textit{hamlet-english, hamlet-french} and \textit{hamlet-german}.
+			
+			\item \textbf{output directory} :- This directory contains the output register (in csv) for all literary works under consideration. Each register has one-hundred and four (104) columns. The first column corresponds to the \textit{rank} of each unique word presented by the counters. The first counter considered was the exact counter which counts the exact number of occurrences of each word in the literary work ranked in descending order. The remaining one hundred and two (102) columns after the exact prefixed with a \textit{k} holds the most frequent words in the literary work presented in descending order computed using the \textbf{Misra \& Reis} \cite{misra_gries} frequency counter for one-hundred \textit{k}'s. The domain of the first 100 \textit{k}'s are even numbers ranging from $(2-200)$. In addition to this range, $k=\lfloor \frac{n}{2} \rfloor$ and $k=n$ were considered as presented in each register. The goal for considering varying values of \textit{k} is to clearly understand the trend of output for every different \textit{k}. The word with rank of one (1) for any counter corresponds to the first most frequent word for that counter, rank two (2) corresponds to the second most frequent and so on for that counter under study.\\
+			
+			There are $6$ csv registers/files in this directory. For instance, the files as shown for the output directory in Fig. \ref{figure:projectDirectoryStructure} is the output registers for hamlet-english literary work only.
+			
+			\item \textbf{FrequentCounter.ipynb} \\
+				This is the python notebook file generating the \textit{output} and \textit{combined} registers as detailed above. This file implements three (3) classes. Namely
+				\begin{itemize}
+					\setlength\itemsep{0em}
+					\item FrequentCounter (Counter Implementation)
+					\item StreamAlg (Consider Input as Stream)
+					\item filePreprocessor (Filter Stop-words and Punctuation)
+				\end{itemize}
+		\end{itemize}
+	
+	\section{A Midsummer Nights Dream}
+		\subsection{English}
+			There are $9,060$ tokens in this version of the literary work. On implementing the exact counter, it took about $11 ms$ to fetch all $2883$ unique tokens. In addition, for the one-hundred and two (102) $k$ values, it took about $16.5 secs$ to complete the Misra and Greis algorithm. \\
+			
+			For $k < 8$, we observed no result for the Misra and Greis counters. After $k=90$, result from the Misra and Greis tend to approach rankings from obtained from the exact counter. At $k=n=2884$, the result from the Misra and Greis converged to that of the exact counters.
+			
+		\subsection{French}
+			There are $14,278$ valid tokens in this version of the literary work which took about $6 ms$ to fetch all $5078$ unique tokens. For the one-hundred and two (102) $k$ values, it took about $35 secs$ to execute the Misra and Greis implementation on all $k$ values. \\
+			
+			There was no Misra and Greis counter result for $k=2$. After $k=160$, counter results from the Misra and Greis tend to approach frequent values obtained using the exact counter. At $k=n=5079$, the result from the Misra and Greis converged to that of the exact counters.
+			
+		\subsection{German}
+			The literary work contains $8,477$ valid tokens of which $3,851$ are unique. It took about $6 ms$ to obtain the unique words. For all one-hundred and two (102) $k$ values, it took about $17 secs$ to finish running the Misra and Greis method. \\
+			
+			Counter estimates started reporting correct values after $k=108$. Again, $k=n=3852$ recorded convergence of the the Misra and Greis method to the results from the exact counter.
+		
+	\section{Hamlet}
+		\subsection{English}
+			$4,616$ unique words were observed from the total $16,121$ tokens. Entire search took about $11 ms$. The algorithm took about $35 secs$ to finish executing Misra and Greis estimates for the one-hundred and two (102) $k$ values.\\
+			
+			After about $k=62$, the top first five (5) most frequent words were correctly estimated. Where $k=n=4617$, we had the convergence of Misra and Greis results to the exact counter's results.
+			
+		\subsection{French}
+			$8,522$ unique words were found from the total $29,553$ tokens, which lasted about $11 ms$. The algorithm took about $91 secs$ to execute Misra and Greis estimates for the one-hundred and two (102) $k$ values.\\
+			
+			Counter estimates started reporting correct values after $k=130$. Again, $k=n=8523$ recorded convergence of the the Misra and Greis method to the results from the exact counter.
+			
+		\subsection{German}
+			There are $16,472$ valid tokens in this version of the literary work which took about $6 ms$ to fetch all $5,754$ unique tokens. For the one-hundred and two (102) $k$ values, it took about $43 secs$ to execute the Misra and Greis implementation on all $k$ values.\\
+			
+			There was no Misra and Greis counter result for $k<6$. After $k=90$, top five (5) counter results from the Misra and Greis tend to approach frequent values obtained using the exact counter. At $k=n=5755$, the result from the Misra and Greis converged to that of the exact counters.
+		
+	\section{Conclusion}
+		From the above results and analysis, we arrive at the following conclusions;
+		\begin{itemize}
+			\setlength\itemsep{1em}
+			\item For smaller values of k, we record very bad estimates for the most frequent words in the literary works. For larger values, our estimates get better. We can infer that, the parameter \textit{k} controls the quality of the results obtained.
+			\item At most $(k-1)$ counters are obtained at any time.
+		\end{itemize}
+		
+%	\bibliographystyle{plain}.
+	\bibliography{references} % use a field named url or \url{} for URLs
+	% Note: the \bibliographystyle is set automatically
+	
+\end{document}
