@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{adjacencymatrixdefinition}
+Nykamp DQ,
+\newblock ``Adjacency matrix definition''.
+\newline\textbf{URL:} \url{http://mathinsight.org/definition/adjacency_matrix}
+
+\bibitem{GONZALEZ1985293}
+Teofilo~F. Gonzalez,
+\newblock ``Clustering to minimize the maximum intercluster distance'',
+\newblock {\em Theoretical Computer Science}, vol.~38, pp.~293--306, 1985.
+\newline\textbf{URL:}
+  \url{https://www.sciencedirect.com/science/article/pii/0304397585902245}
+
+\bibitem{black2012greedy}
+Paul~E Black,
+\newblock ``greedy algorithm, dictionary of algorithms and data structures'',
+\newblock {\em US Nat. Inst. Std. \& Tech Report}, vol.~88, pp.~95, 2012.
+
+\bibitem{erdos1959random}
+P~Erdos and A~Renyi,
+\newblock ``On the random graphs 1, vol. 6'',
+\newblock {\em Institute of Mathematics University of DeBreceniens, Debrecar,
+  Hungary}, 1959.
+
+\bibitem{kcenterProblem}
+Kirtan Padh,
+\newblock ``The k-center problem'', 12 2015.
+
+\end{thebibliography}
