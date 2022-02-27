@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.24)  23 FEB 2022 17:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.24)  27 FEB 2022 21:47
 entering extended mode
 **./Ablordeppey.tex
 (Ablordeppey.tex
@@ -126,6 +126,8 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.st
 y
 Package: enumitem 2019/06/20 v3.9 Customized lists
@@ -205,7 +207,98 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen172
 \Gin@req@width=\dimen173
-) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/forest\forest.sty
+Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz
+.sty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.s
+ty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-common.tex
+\pgfutil@everybye=\toks25
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-common-lists.tex))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-latex.def
+\pgfutil@abb=\box54
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs
+.code.tex
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex
+)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore
+.sty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys
+.sty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+sfiltered.code.tex
+\pgfkeys@tmptoks=\toks28
+))
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
+\pgf@xd=\dimen184
+\pgf@yd=\dimen185
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count284
+\c@pgf@countb=\count285
+\c@pgf@countc=\count286
+\c@pgf@countd=\count287
+\t@pgf@toka=\toks29
+\t@pgf@tokb=\toks30
+\t@pgf@tokc=\toks31
+\pgf@sys@id@count=\count288
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.
+cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+yssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count289
+\pgfsyssoftpath@bigbuffer@items=\count290
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -222,10 +315,398 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+re.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc
+.code.tex
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil
+.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpars
+er.code.tex
+\pgfmath@dimen=\dimen186
+\pgfmath@count=\count291
+\pgfmath@box=\box55
+\pgfmath@toks=\toks32
+\pgfmath@stack@operand=\toks33
+\pgfmath@stack@operation=\toks34
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.code.tex
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.basic.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.trigonometric.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.random.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.comparison.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.base.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.round.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.misc.code.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.integerarithmetics.code.tex)))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloa
+t.code.tex
+\c@pgfmathroundto@lastzeros=\count292
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code
+.tex)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count293
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+regraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen261
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+requick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen265
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count294
+\pgf@shadingcount=\count295
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box59
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+relayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box60
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen267
+\pgf@nodesepend=\dimen268
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.s
+ty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.
+sty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor
+.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex)
+\pgffor@iter=\dimen269
+\pgffor@skip=\dimen270
+\pgffor@stack=\toks35
+\pgffor@toks=\toks36
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz\tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count296
+\pgfplotmarksize=\dimen271
+)
+\tikz@lastx=\dimen272
+\tikz@lasty=\dimen273
+\tikz@lastxsaved=\dimen274
+\tikz@lastysaved=\dimen275
+\tikz@lastmovetox=\dimen276
+\tikz@lastmovetoy=\dimen277
+\tikzleveldistance=\dimen278
+\tikzsiblingdistance=\dimen279
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count297
+\tikznumberofchildren=\count298
+\tikznumberofcurrentchild=\count299
+\tikz@fig@count=\count300
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+ematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count301
+\pgfmatrixcurrentcolumn=\count302
+\pgf@matrix@numberofcolumns=\count303
+)
+\tikz@expandcount=\count304
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes
+\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes
+\pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes
+\pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes
+\pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryshapes.callouts.code.tex
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes
+\pgflibraryshapes.callouts.code.tex))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes
+\pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodepartlowerbox=\box65
+\pgfnodeparttwobox=\box66
+\pgfnodepartthreebox=\box67
+\pgfnodepartfourbox=\box68
+\pgfnodeparttwentybox=\box69
+\pgfnodepartnineteenbox=\box70
+\pgfnodeparteighteenbox=\box71
+\pgfnodepartseventeenbox=\box72
+\pgfnodepartsixteenbox=\box73
+\pgfnodepartfifteenbox=\box74
+\pgfnodepartfourteenbox=\box75
+\pgfnodepartthirteenbox=\box76
+\pgfnodeparttwelvebox=\box77
+\pgfnodepartelevenbox=\box78
+\pgfnodeparttenbox=\box79
+\pgfnodepartninebox=\box80
+\pgfnodeparteightbox=\box81
+\pgfnodepartsevenbox=\box82
+\pgfnodepartsixbox=\box83
+\pgfnodepartfivebox=\box84
+)))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryintersections.code.tex
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryfpu.code.tex)
+\pgf@intersect@solutions=\count305
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks37
+\pgfopts@list@add@b@toks=\toks38
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count306
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/elocalloc\elocalloc.st
+y
+Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
+) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.
+sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpar
+se.sty
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-08-27 L3 programming layer (loader) 
+
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count307
+\l__pdf_internal_box=\box85
+))
+Package: xparse 2021-08-27 L3 Experimental document command parser
+)
+(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/inlinedef\inlinedef.st
+y
+Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
+\ID@toks=\toks39
+\ID@count=\count308
+)
+\ID@usercommands=\toks40
+\safeloop@depth=\count309
+\safeRKloop@depth=\count310
+\forest@temp@dimen=\dimen280
+\forest@temp@count=\count311
+\forest@n=\count312
+\forest@temp@global@count=\count313
+\forest@temp@toks=\toks41
+\forest@temparray@M=\count314
+\forest@temparray@N=\count315
+\forest@global@temparray@M=\count316
+\forest@global@temparray@N=\count317
+\forest@isnum@count=\count318
+\forest@isdim@nonintpart=\count319
+\forest@isdim@dimen=\dimen281
+\forest@sort@m=\count320
+\forest@sort@k=\count321
+\forest@sort@p=\count322
+\bracket@content=\toks42
+\bracket@afterthought=\toks43
+\forest@node@maxid=\count323
+\forest@process@left@M=\count324
+\forest@process@left@N=\count325
+\forest@process@right@M=\count326
+\forest@process@right@N=\count327
+\forest@process@saved@M=\count328
+\forest@process@saved@N=\count329
+\forest@process@result@M=\count330
+\forest@process@result@N=\count331
+\forest@process@n=\count332
+\forest@nodewalk@branch@toks=\toks44
+\forest@nodewalk@shortsteps@resolution=\toks45
+\forest@do@dynamics=\toks46
+\forest@box=\box86
+\forest@xg=\dimen282
+\forest@yg=\dimen283
+\forest@xs=\dimen284
+\forest@ys=\dimen285
+\forest@pi@toks=\toks47
+\forest@segment@toks=\toks48
+\forest@PIi@toks=\toks49
+\forest@PIii@toks=\toks50
+\forest@copy@in=\read4
+\forest@copy@out=\write4
+\forest@externalize@max@outer@n=\count333
+\forest@externalize@inner@n=\count334
+)
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/algorithm2e\algorithm2
 e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count284
+\c@AlgoLine=\count335
  (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
@@ -234,7 +715,7 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.st
 y
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count285
+\c@checkoddpage=\count336
 ) (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
@@ -249,77 +730,72 @@ Package: relsize 2013/03/29 ver 4.1
 \skiplength=\skip59
 \algomargin=\skip60
 \skipalgocfslide=\skip61
-\algowidth=\dimen174
-\inoutsize=\dimen175
-\inoutindent=\dimen176
-\interspacetitleruled=\dimen177
-\interspacealgoruled=\dimen178
-\interspacetitleboxruled=\dimen179
+\algowidth=\dimen286
+\inoutsize=\dimen287
+\inoutindent=\dimen288
+\interspacetitleruled=\dimen289
+\interspacealgoruled=\dimen290
+\interspacetitleboxruled=\dimen291
 \algocf@ruledwidth=\skip62
-\algocf@inoutbox=\box54
-\algocf@inputbox=\box55
+\algocf@inoutbox=\box87
+\algocf@inputbox=\box88
 \AlCapSkip=\skip63
 \AlCapHSkip=\skip64
 \algoskipindent=\skip65
-\algocf@nlbox=\box56
-\algocf@hangingbox=\box57
-\algocf@untilbox=\box58
+\algocf@nlbox=\box89
+\algocf@hangingbox=\box90
+\algocf@untilbox=\box91
 \algocf@skipuntil=\skip66
-\algocf@capbox=\box59
+\algocf@capbox=\box92
 \algocf@lcaptionbox=\skip67
 \algoheightruledefault=\skip68
 \algoheightrule=\skip69
 \algotitleheightruledefault=\skip70
 \algotitleheightrule=\skip71
-\c@algocfline=\count286
-\c@algocfproc=\count287
-\c@algocf=\count288
-\algocf@algoframe=\box60
-\algocf@algobox=\box61
+\c@algocfline=\count337
+\c@algocfproc=\count338
+\c@algocf=\count339
+\algocf@algoframe=\box93
+\algocf@algobox=\box94
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
-8.
+9.
 
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
-ftex.def
-File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count289
-\l__pdf_internal_box=\box62
-) (Ablordeppey.aux)
+(Ablordeppey.aux)
 \openout1 = `Ablordeppey.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
 
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
-\scratchdimen=\dimen180
-\scratchbox=\box63
-\nofMPsegments=\count291
-\nofMParguments=\count292
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count293
-\MPscratchDim=\dimen181
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count340
+\scratchdimen=\dimen292
+\scratchbox=\box95
+\nofMPsegments=\count341
+\nofMParguments=\count342
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count343
+\MPscratchDim=\dimen293
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
+\everyMPtoPDFconversion=\toks52
 )
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
 base.sty
@@ -331,326 +807,397 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
 
  (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
 
  (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 63--65
+Underfull \hbox (badness 6995) in paragraph at lines 64--66
 \OT1/ptm/b/n/9 com-plete undi-rected graph $[]$, with $\OMS/cmsy/b/n/9 V$ \OT1/
 ptm/b/n/9 the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
 
  []
 
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-47.
+64.
 (C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 174--175
-\OT1/ptm/m/n/10 ja-cency ma-trix $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Adj\OT1/cmr
-/m/n/10 (\OMS/cmsy/m/n/10 G\OT1/cmr/m/n/10 ))$\OT1/ptm/m/n/10 , which hap-pens 
-to be very
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
-
- []
-
 [1{C:/Users/iCETEE/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 5446) in paragraph at lines 183--184
+\OT1/ptm/m/n/10 these pack-ages were used are de-tailed in the
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
 
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 230--231
-\OT1/ptm/m/n/10 turned by this func-tion con-tains sym-me-try par-ti-tions.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 2
-40.
-(C:\Users\iCETEE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 240.
-LaTeX Font Info:    Font shape `OMS/ptm/b/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 244.
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 246--247
+[]\OT1/ptm/m/n/10 The \OT1/ptm/b/n/10 Al-go-rithm 1[] \OT1/ptm/m/n/10 is a help
+er func-tion for the main
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
+
+ []
 
 [2]
-Underfull \hbox (badness 2418) in paragraph at lines 294--295
-[]\OT1/ptm/m/n/10 instantiate a very large in-te-ger value to be the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
-
- []
-
-
-Underfull \vbox (badness 3343) has occurred while \output is active []
-
-
-Underfull \hbox (badness 1107) in paragraph at lines 310--311
+Underfull \hbox (badness 1107) in paragraph at lines 328--329
 \OT1/ptm/m/n/10 problem-solving heuris-tic of mak-ing a lo-cally op-ti-mal
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 310--311
+Underfull \hbox (badness 1360) in paragraph at lines 328--329
 \OT1/ptm/m/n/10 strat-egy does not pro-duce an op-ti-mal so-lu-tion, but a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 330--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
-
- []
-
-<imgs/greedyexx1.png, id=40, 433.62pt x 289.08pt>
-File: imgs/greedyexx1.png Graphic file (type png)
-<use imgs/greedyexx1.png>
-Package pdftex.def Info: imgs/greedyexx1.png  used on input line 350.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-<imgs/greedyexx2.png, id=42, 433.62pt x 289.08pt>
-File: imgs/greedyexx2.png Graphic file (type png)
-<use imgs/greedyexx2.png>
-Package pdftex.def Info: imgs/greedyexx2.png  used on input line 350.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-
-Overfull \hbox (24.0pt too wide) in paragraph at lines 349--352
-[][] 
- []
-
-<imgs/greedycont1.png, id=43, 433.62pt x 289.08pt>
-File: imgs/greedycont1.png Graphic file (type png)
-<use imgs/greedycont1.png>
-Package pdftex.def Info: imgs/greedycont1.png  used on input line 358.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-<imgs/greedycont2.png, id=44, 433.62pt x 289.08pt>
-File: imgs/greedycont2.png Graphic file (type png)
-<use imgs/greedycont2.png>
-Package pdftex.def Info: imgs/greedycont2.png  used on input line 358.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-
-Overfull \hbox (24.0pt too wide) in paragraph at lines 357--360
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
-
- []
-
-[4 <./imgs/greedyexx1.png> <./imgs/greedyexx2.png> <./imgs/greedycont1.png> <./
-imgs/greedycont2.png>]
-Underfull \hbox (badness 1067) in paragraph at lines 449--450
-\OT1/ptm/m/n/10 up-dat-ing the weight of the su-peredges con-nect-ing the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
-
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 546--547
-[]\OT1/ptm/m/n/10 The \OT1/ptm/b/n/10 Prob-a-bil-i-tyRan-dom-ized \OT1/ptm/m/n/
-10 in Al-go-rithm (8[]) is the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
-
- []
-
-<imgs/probrandexx1.png, id=52, 433.62pt x 289.08pt>
-File: imgs/probrandexx1.png Graphic file (type png)
-<use imgs/probrandexx1.png>
-Package pdftex.def Info: imgs/probrandexx1.png  used on input line 552.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-<imgs/probrandexx2.png, id=53, 433.62pt x 289.08pt>
-File: imgs/probrandexx2.png Graphic file (type png)
-<use imgs/probrandexx2.png>
-Package pdftex.def Info: imgs/probrandexx2.png  used on input line 552.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-<imgs/probrandexx3.png, id=54, 433.62pt x 289.08pt>
-File: imgs/probrandexx3.png Graphic file (type png)
-<use imgs/probrandexx3.png>
-Package pdftex.def Info: imgs/probrandexx3.png  used on input line 554.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-<imgs/probrandexx4.png, id=55, 433.62pt x 289.08pt>
-File: imgs/probrandexx4.png Graphic file (type png)
-<use imgs/probrandexx4.png>
-Package pdftex.def Info: imgs/probrandexx4.png  used on input line 554.
-(pdftex.def)             Requested size: 118.07893pt x 78.71869pt.
-
-Overfull \hbox (24.0pt too wide) in paragraph at lines 551--557
-[][] 
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 562--563
-\OT1/ptm/m/n/10 as de-scribed in \OT1/ptm/b/n/10 Prob-a-bil-i-tyRan-dom-ized \O
-T1/ptm/m/n/10 in Al-go-rithm
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
-
- []
-
-[5 <./imgs/probrandexx1.png> <./imgs/probrandexx2.png> <./imgs/probrandexx3.png
-> <./imgs/probrandexx4.png>]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 565.
+(amsmath)                 on input line 411.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
-<imgs/complexitiesallalgs.png, id=63, 538.01pt x 371.3875pt>
-File: imgs/complexitiesallalgs.png Graphic file (type png)
-<use imgs/complexitiesallalgs.png>
-Package pdftex.def Info: imgs/complexitiesallalgs.png  used on input line 660.
-(pdftex.def)             Requested size: 118.07893pt x 81.50716pt.
-<imgs/complexitiesbruteforceimpprobrand.png, id=64, 515.9275pt x 371.3875pt>
-File: imgs/complexitiesbruteforceimpprobrand.png Graphic file (type png)
-<use imgs/complexitiesbruteforceimpprobrand.png>
-Package pdftex.def Info: imgs/complexitiesbruteforceimpprobrand.png  used on in
-put line 660.
-(pdftex.def)             Requested size: 118.07893pt x 84.99797pt.
+ []
 
-Overfull \hbox (24.0pt too wide) in paragraph at lines 659--662
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+
+ []
+
+[4]
+Underfull \hbox (badness 1888) in paragraph at lines 458--459
+\OT1/ptm/b/n/10 ex-e-cu-tions \OT1/ptm/m/n/10 di-rec-tory holds the com-plete a
+nd de-tailed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
+
+ []
+
+<imgs/exhaustiveCounterNodes20.png, id=44, 421.575pt x 277.035pt>
+File: imgs/exhaustiveCounterNodes20.png Graphic file (type png)
+<use imgs/exhaustiveCounterNodes20.png>
+Package pdftex.def Info: imgs/exhaustiveCounterNodes20.png  used on input line 
+467.
+(pdftex.def)             Requested size: 236.15787pt x 155.19348pt.
+<imgs/exhaustiveCounterNodesSummary.png, id=45, 413.74574pt x 251.13824pt>
+File: imgs/exhaustiveCounterNodesSummary.png Graphic file (type png)
+<use imgs/exhaustiveCounterNodesSummary.png>
+Package pdftex.def Info: imgs/exhaustiveCounterNodesSummary.png  used on input 
+line 473.
+(pdftex.def)             Requested size: 236.15787pt x 143.34572pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/exhaustiveTimeNodes20.png, id=46, 448.074pt x 271.61475pt>
+File: imgs/exhaustiveTimeNodes20.png Graphic file (type png)
+<use imgs/exhaustiveTimeNodes20.png>
+Package pdftex.def Info: imgs/exhaustiveTimeNodes20.png  used on input line 479
+.
+(pdftex.def)             Requested size: 236.15787pt x 143.15523pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Text page 5 contains only floats.
+
+[5 <./imgs/exhaustiveCounterNodes20.png> <./imgs/exhaustiveCounterNodesSummary.
+png> <./imgs/exhaustiveTimeNodes20.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
+
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 526--527
+\OT1/ptm/m/n/10 max-i-mum time taken spent on the largest graph with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--527
+
+ []
+
+<imgs/greedyCounterNodes20.png, id=50, 398.08725pt x 255.354pt>
+File: imgs/greedyCounterNodes20.png Graphic file (type png)
+<use imgs/greedyCounterNodes20.png>
+Package pdftex.def Info: imgs/greedyCounterNodes20.png  used on input line 531.
+
+(pdftex.def)             Requested size: 236.15787pt x 151.48358pt.
+<imgs/greedyCounterNodesSummary.png, id=51, 398.08725pt x 255.354pt>
+File: imgs/greedyCounterNodesSummary.png Graphic file (type png)
+<use imgs/greedyCounterNodesSummary.png>
+Package pdftex.def Info: imgs/greedyCounterNodesSummary.png  used on input line
+ 537.
+(pdftex.def)             Requested size: 236.15787pt x 151.48358pt.
+<imgs/greedyTimeNodes20.png, id=52, 384.83775pt x 254.75175pt>
+File: imgs/greedyTimeNodes20.png Graphic file (type png)
+<use imgs/greedyTimeNodes20.png>
+Package pdftex.def Info: imgs/greedyTimeNodes20.png  used on input line 543.
+(pdftex.def)             Requested size: 236.15787pt x 156.33125pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 588--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
+
+ []
+
+[6 <./imgs/greedyCounterNodes20.png> <./imgs/greedyCounterNodesSummary.png> <./
+imgs/greedyTimeNodes20.png>]
+<imgs/randomizedCounterNodes20.png, id=56, 444.4605pt x 281.25075pt>
+File: imgs/randomizedCounterNodes20.png Graphic file (type png)
+<use imgs/randomizedCounterNodes20.png>
+Package pdftex.def Info: imgs/randomizedCounterNodes20.png  used on input line 
+595.
+(pdftex.def)             Requested size: 236.15787pt x 149.43983pt.
+<imgs/randomizedTimeNodes20.png, id=57, 444.4605pt x 281.25075pt>
+File: imgs/randomizedTimeNodes20.png Graphic file (type png)
+<use imgs/randomizedTimeNodes20.png>
+Package pdftex.def Info: imgs/randomizedTimeNodes20.png  used on input line 601
+.
+(pdftex.def)             Requested size: 236.15787pt x 149.43983pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/n5.png, id=58, 722.7pt x 722.7pt>
+File: imgs/n5.png Graphic file (type png)
+<use imgs/n5.png>
+Package pdftex.def Info: imgs/n5.png  used on input line 648.
+(pdftex.def)             Requested size: 236.1539pt x 188.92313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+
+ []
+
+[7 <./imgs/randomizedCounterNodes20.png> <./imgs/randomizedTimeNodes20.png> <./
+imgs/n5.png>]
+Underfull \hbox (badness 7081) in paragraph at lines 655--656
+[]\OT1/ptm/m/n/10 The Exhaustive-Search im-ple-men-ta-tion presents the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--656
+
+ []
+
+<imgs/exhaustive_n5_k2.png, id=65, 722.7pt x 722.7pt>
+File: imgs/exhaustive_n5_k2.png Graphic file (type png)
+<use imgs/exhaustive_n5_k2.png>
+Package pdftex.def Info: imgs/exhaustive_n5_k2.png  used on input line 659.
+(pdftex.def)             Requested size: 118.07893pt x 118.07143pt.
+<imgs/exhaustive_n5_k3.png, id=66, 722.7pt x 722.7pt>
+File: imgs/exhaustive_n5_k3.png Graphic file (type png)
+<use imgs/exhaustive_n5_k3.png>
+Package pdftex.def Info: imgs/exhaustive_n5_k3.png  used on input line 659.
+(pdftex.def)             Requested size: 118.07893pt x 118.07143pt.
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 658--661
 [][] 
  []
 
-<imgs/complexitiesgreedyimpprobrand.png, id=65, 396.48125pt x 279.0425pt>
-File: imgs/complexitiesgreedyimpprobrand.png Graphic file (type png)
-<use imgs/complexitiesgreedyimpprobrand.png>
-Package pdftex.def Info: imgs/complexitiesgreedyimpprobrand.png  used on input 
-line 664.
-(pdftex.def)             Requested size: 118.07893pt x 83.10025pt.
-[6 <./imgs/complexitiesallalgs.png> <./imgs/complexitiesbruteforceimpprobrand.p
-ng> <./imgs/complexitiesgreedyimpprobrand.png>]
-Underfull \hbox (badness 1360) in paragraph at lines 729--730
-[]\OT1/ptm/m/n/10 Again, the num-ber of it-er-a-tions ex-e-cuted by the
+<imgs/greedy_n5_k2.png, id=67, 722.7pt x 722.7pt>
+File: imgs/greedy_n5_k2.png Graphic file (type png)
+<use imgs/greedy_n5_k2.png>
+Package pdftex.def Info: imgs/greedy_n5_k2.png  used on input line 667.
+(pdftex.def)             Requested size: 118.07893pt x 118.07143pt.
+<imgs/greedy_n5_k3.png, id=68, 722.7pt x 722.7pt>
+File: imgs/greedy_n5_k3.png Graphic file (type png)
+<use imgs/greedy_n5_k3.png>
+Package pdftex.def Info: imgs/greedy_n5_k3.png  used on input line 667.
+(pdftex.def)             Requested size: 118.07893pt x 118.07143pt.
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 666--669
+[][] 
+ []
+
+<imgs/randomized_n5_k2.png, id=69, 722.7pt x 722.7pt>
+File: imgs/randomized_n5_k2.png Graphic file (type png)
+<use imgs/randomized_n5_k2.png>
+Package pdftex.def Info: imgs/randomized_n5_k2.png  used on input line 675.
+(pdftex.def)             Requested size: 118.07893pt x 118.07143pt.
+<imgs/randomized_n5_k3.png, id=70, 722.7pt x 722.7pt>
+File: imgs/randomized_n5_k3.png Graphic file (type png)
+<use imgs/randomized_n5_k3.png>
+Package pdftex.def Info: imgs/randomized_n5_k3.png  used on input line 675.
+(pdftex.def)             Requested size: 118.07893pt x 118.07143pt.
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 674--677
+[][] 
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 729--730
-\OT1/ptm/m/n/10 Greedy-Heuristics al-go-rithm can for-mally be pre-
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
+
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 685--686
 
-[7] (Ablordeppey.bbl) [8
+ []
 
-] (Ablordeppey.aux) ) 
+(Ablordeppey.bbl) [8 <./imgs/exhaustive_n5_k2.png> <./imgs/exhaustive_n5_k3.png
+> <./imgs/greedy_n5_k2.png> <./imgs/greedy_n5_k3.png> <./imgs/randomized_n5_k2.
+png> <./imgs/randomized_n5_k3.png>] (Ablordeppey.aux) ) 
 Here is how much of TeX's memory you used:
- 5541 strings out of 478927
- 85965 string characters out of 2852060
- 430827 words of memory out of 3000000
- 23279 multiletter control sequences out of 15000+600000
- 438757 words of font info for 104 fonts, out of 8000000 for 9000
+ 28303 strings out of 478927
+ 645161 string characters out of 2852060
+ 962646 words of memory out of 3000000
+ 45745 multiletter control sequences out of 15000+600000
+ 437308 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,23n,68p,992b,665s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/enc/d
-vips/base/8r.enc}<C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmbsy10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cmextra/cmbsy5.pfb><C:/Users/iCETEE/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb><C:/Users/iCETEE/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb><C:/Us
-ers/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.
+ 135i,26n,132p,1589b,2960s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/iCETEE/AppData
+/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/iCETEE/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb><C:/Users/iCE
+TEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy6.pf
+b><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+extra/cmbsy9.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmbx6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/iCETEE/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/iCETEE/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/iCETE
+E/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/U
+sers/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.
 pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmbx6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx7.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx9.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/iCETEE/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/iCETEE/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/iCETEE/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/
-iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+cm/cmmi8.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cmextra/cmmib6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cmextra/cmmib9.pfb><C:/Users/iCETEE/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/iCETEE/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/iCETEE/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/i
+CETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cmextra/cmmib6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cmextra/cmmib9.pfb><C:/Users/iCETEE/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/iCETEE/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/iCETEE/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/iCETEE
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/User
-s/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-<C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy5.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/iCETEE/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/iCETEE/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/iCETEE/A
-ppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/iCETE
-E/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/iCET
-EE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/iC
-ETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/i
-CETEE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Ablordeppey.pdf (8 pages, 535781 bytes).
+sy6.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><C:/Users/iCETEE/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/symbols/msam10.pfb><C:/Users/iCETEE/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/iCETEE/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/iCETEE/App
+Data/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/iCETEE/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/iCETEE/
+AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/iCETEE
+/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Ablordeppey.pdf (8 pages, 706406 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
+ 191 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
